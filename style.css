@@ -68,18 +68,12 @@ body {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 0;  
-    object-fit: cover;
-    border: none;      
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
- 
-.container .content .profile-section .profile-img,
-.profile-img {
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
-    border-radius: 0;
-}
+    object-fit: cover;
+    border: none;
+    box-shadow: none;
+    transition: transform 0.3s ease;
 }
 
 .profile-img:hover {
