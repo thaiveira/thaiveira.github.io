@@ -170,7 +170,7 @@ main.content {
 /* Footer */
 footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.8);
     font-size: 0.7rem;
     color: var(--secondary-color);
