@@ -45,7 +45,7 @@ body {
 }
 
 /* Container Principal */
-.content {
+main.content {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
