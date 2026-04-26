@@ -64,7 +64,7 @@ body {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 0%;
     object-fit: cover;
     border: 0px solid var(--accent-color);
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
@@ -248,7 +248,6 @@ footer {
 
 .separator-img {
     width: 100%;           /* Ocupa toda a largura do container */
-    max-width: 300px;      /* Largura máxima opcional */
     height: auto;          /* Mantém proporção */
     opacity: 0.7;
     object-fit: contain;
