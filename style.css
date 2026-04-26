@@ -72,6 +72,12 @@ body {
     border: none;      /* ← Sem borda colorida */
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    /* Seletor mais específico para garantir */
+.container .content .profile-section .profile-img,
+.profile-img {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    border-radius: 0;
 }
 }
 
