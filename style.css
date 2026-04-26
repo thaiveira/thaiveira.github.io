@@ -247,7 +247,7 @@ footer {
 }
 
 .separator-img {
-    height: 30px;
+    height: auto;
     width: auto;
     opacity: 0.7;
     object-fit: contain;
