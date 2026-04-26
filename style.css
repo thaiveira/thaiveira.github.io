@@ -48,13 +48,14 @@ body {
 .content {
     text-align: center;
     max-width: 600px;
+    margin: 0 auto;  
     background: var(--bg-overlay);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     animation: fadeInUp 1s ease 0.3s backwards;
-    overflow: hidden; /* ← IMPORANTE: segura tudo dentro */
-    word-wrap: break-word; /* ← Quebra palavras longas */
+    overflow: hidden;
+    word-wrap: break-word;
 }
 }
 
@@ -67,12 +68,12 @@ body {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 0;  /* ← Quadrada */
+    border-radius: 0;  
     object-fit: cover;
-    border: none;      /* ← Sem borda colorida */
+    border: none;      
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    /* Seletor mais específico para garantir */
+ 
 .container .content .profile-section .profile-img,
 .profile-img {
     border-radius: 0 !important;
@@ -83,17 +84,6 @@ body {
 
 .profile-img:hover {
     transform: scale(1.05);
-}
-
-/* Conteúdo */
-.content {
-    text-align: center;
-    max-width: 600px;
-    background: var(--bg-overlay);
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    animation: fadeInUp 1s ease 0.3s backwards;
 }
 
 .title {
