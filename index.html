@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -12,25 +12,6 @@
 <body>
     <!-- Background -->
     <div class="background"></div>
-    
-    <!-- Navigation / Menu -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Thaise Oliveira</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Início</a></li>
-                <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfólio</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
     
     <!-- Container Principal -->
     <main class="container">
@@ -53,14 +34,27 @@
             
             <!-- Links Sociais - Mastodon -->
             <div class="social-links">
-                <a href="https://mastodon.social/@s1n3rgy4" target="_blank" class="social-btn">
+                <a href="https://cyberplace.social/@s1n3rgy4" target="_blank" class="social-btn">
                     <!-- Ícone Mastodon SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.234 1.985 4.276 4.154 5.832 2.168 1.556 4.087 1.783 4.956 2.599 2.43 1.545 4.349 3.72 4.956 5.28.576 1.48 1.077 3.152 1.53 4.99.28 1.123.4 2.042.5 2.752.133 1.856.04 3.353-.278 4.412-.38 1.332-1.12 2.054-2.274 2.464-1.41.502-2.86.374-4.156-.034-.968-.32-1.87-.853-2.66-1.567l-1.368-1.256-.978 1.172c-1.542 1.766-3.63 2.253-5.324 1.547-1.61-.678-2.69-2.005-2.948-4.075-.34-2.653.152-5.467 1.423-7.826l.98-1.787c.263-.463.264-.463.597-.422.934.12 1.92.09 2.87-.084.95-.177 1.882-.53 2.75-1.036a13.48 13.48 0 0 0 2.498-1.937c.024-.023.047-.054.066-.087l.006.006c.547-.637.94-1.323 1.17-2.044.23-.72.383-1.457.46-2.195.175-1.612.154-3.218.095-4.82-.066-1.733-.117-3.465-.32-5.19-.135-1.145-.325-2.28-.582-3.4-.258-1.123-.58-2.22-1.007-3.263-.427-1.044-.965-2.03-1.616-2.948-.65-.918-1.44-1.735-2.387-2.427a9.301 9.301 0 0 1-1.197-1.018c-.016-.016-.03-.037-.046-.053a9.543 9.543 0 0 1-1.123-1.331c-.226-.31-.482-.578-.794-.79-.312-.212-.664-.37-1.026-.448a5.302 5.302 0 0 1-.281-.074c-.007-.002-.016-.003-.024-.005l-.004-.001h-.002l-.006.001-.004.001c-.002 0-.003.001-.004.002-1.133.248-2.2.793-3.13 1.59-.902.802-1.636 1.77-2.175 2.858-.552 1.135-.863 2.393-.917 3.703-.023.47-.02.943.046 1.411.065.46.177.916.333 1.357.155.44.365.86.625 1.247.26.385.574.73.934 1.022.36.292.768.52 1.2.673.696.25 1.444.297 2.19.137.747-.16 1.446-.514 2.045-1.04.6-.528 1.066-1.193 1.383-1.966.317-.773.493-1.614.522-2.485.02-.586.01-1.174-.03-1.76-.04-.586-.127-1.162-.257-1.72z"/>
                     </svg>
-                    @s1n3rgy4@cyberplace.social
+                    Mastodon
                 </a>
             </div>
+            
+            <!-- Menu de Navegação -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Início</a>
+                <span class="nav-divider">✶</span>
+                <a href="sobre.html" class="nav-link">Sobre</a>
+                <span class="nav-divider">✶</span>
+                <a href="portfolio.html" class="nav-link">Portfólio</a>
+                <span class="nav-divider">✶</span>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <span class="nav-divider">✶</span>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
         </div>
     </main>
 
@@ -68,21 +62,5 @@
     <footer>
         <p>&copy; 2025 Thaise Oliveira. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- JavaScript para Menu Mobile -->
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }));
-    </script>
 </body>
 </html>
