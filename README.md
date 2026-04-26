@@ -1,2 +1,3 @@
-# thaiveira.github.io
-meu site
+# 🌐 Site - Thaise Oliveira
+
+Portfolio pessoal adaptado para GitHub Pages.
