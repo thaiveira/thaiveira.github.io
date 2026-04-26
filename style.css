@@ -48,7 +48,7 @@ body {
 .content {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto;  
+    margin: 0 auto;
     background: var(--bg-overlay);
     padding: 3rem;
     border-radius: 20px;
@@ -56,7 +56,6 @@ body {
     animation: fadeInUp 1s ease 0.3s backwards;
     overflow: hidden;
     word-wrap: break-word;
-}
 }
 
 /* Seção do Perfil */
@@ -70,17 +69,17 @@ body {
     height: auto;
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
-    object-fit: cover;
+    object-fit: contain;
     border: none;
     box-shadow: none;
     transition: transform 0.3s ease;
-}
 }
 
 .profile-img:hover {
     transform: scale(1.05);
 }
 
+/* Título e Subtítulo */
 .title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -94,6 +93,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Descrição */
 .description {
     font-size: 1rem;
     line-height: 1.8;
@@ -133,9 +133,7 @@ body {
     box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
 }
 
-/* ============================================
-   MENU DE NAVEGAÇÃO - Centralizado e Horizontal
-============================================ */
+/* Menu de Navegação */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -175,7 +173,7 @@ footer {
     text-align: center;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: var(--secondary-color);
 }
 
@@ -207,32 +205,25 @@ footer {
     .content {
         padding: 2rem 1.5rem;
     }
-    
     .title {
         font-size: 2rem;
     }
-    
     .profile-img {
-        width: 150px;
-        height: 150px;
+        width: 100%;
     }
-
     .nav-menu {
         gap: 0.3rem;
     }
-
     .nav-link {
         font-size: 0.9rem;
         padding: 0.4rem 0.8rem;
     }
-
     .nav-divider {
         font-size: 0.6rem;
     }
 }
-/* ============================================
-   SEPARADOR COM IMAGEM ABSTRATA
-============================================ */
+
+/* Separador com Imagem Abstrata */
 .separator {
     display: flex;
     align-items: center;
@@ -242,13 +233,12 @@ footer {
 }
 
 .separator-img {
-    width: 100%;           /* Ocupa toda a largura do container */
-    height: auto;          /* Mantém proporção */
+    width: 100%;
+    height: auto;
     opacity: 0.7;
     object-fit: contain;
 }
 
-/* Variações de tamanho */
 .separator-img.small {
     max-width: 150px;
 }
@@ -257,7 +247,6 @@ footer {
     max-width: 500px;
 }
 
-/* Espaçamento extra */
 .separator.wide {
     margin: 3rem 0;
 }
