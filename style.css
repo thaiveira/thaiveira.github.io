@@ -48,7 +48,7 @@ body {
 main.content {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto; 
     background: var(--bg-overlay);
     padding: 3rem;
     border-radius: 20px;
@@ -57,7 +57,6 @@ main.content {
     overflow: hidden;
     word-wrap: break-word;
 }
-
 /* Seção do Perfil */
 .profile-section {
     margin-bottom: 2rem;
