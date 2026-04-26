@@ -64,11 +64,12 @@ body {
 .profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 0%;
+    border-radius: 0;  /* ← Quadrada */
     object-fit: cover;
-    border: 0px solid var(--accent-color);
+    border: none;      /* ← Sem borda colorida */
     box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+}
 }
 
 .profile-img:hover {
