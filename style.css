@@ -242,24 +242,25 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    width: 100%;
     margin: 1.5rem 0;
 }
 
 .separator-img {
-    height: auto;
-    width: auto;
+    width: 100%;           /* Ocupa toda a largura do container */
+    max-width: 300px;      /* Largura máxima opcional */
+    height: auto;          /* Mantém proporção */
     opacity: 0.7;
-    object-fit: content;
+    object-fit: contain;
 }
 
 /* Variações de tamanho */
 .separator-img.small {
-    height: 20px;
+    max-width: 150px;
 }
 
 .separator-img.large {
-    height: 50px;
+    max-width: 500px;
 }
 
 /* Espaçamento extra */
