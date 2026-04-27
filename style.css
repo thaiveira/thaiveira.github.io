@@ -215,11 +215,11 @@ footer {
         gap: 0.15rem;
     }
     .nav-link {
-        font-size: 0.65rem;
+        font-size: 1rem;
         padding: 0.2rem 0.3rem;
     }
     .nav-divider {
-        font-size: 0.4rem;
+        font-size: 1rem;
     }
 }
 
