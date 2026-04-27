@@ -86,7 +86,7 @@ main.content {
 }
 /* Descrição */
 .description {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.8;
     color: var(--secondary-color);
     margin-bottom: 2rem;
@@ -112,7 +112,7 @@ main.content {
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.7rem;
     transition: all 0.3s ease;
 }
 .social-btn:hover {
