@@ -4,14 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
     --primary-color: #2d3436;
     --secondary-color: #636e72;
     --accent-color: #5d588e;
     --bg-overlay: rgba(255, 255, 255, 0.95);
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
@@ -20,7 +18,6 @@ body {
     color: var(--primary-color);
     overflow-x: hidden;
 }
-
 /* Background Animado */
 .background {
     position: fixed;
@@ -33,7 +30,6 @@ body {
     z-index: -1;
     filter: blur(3px);
 }
-
 .background::after {
     content: '';
     position: absolute;
@@ -43,7 +39,6 @@ body {
     height: 100%;
     background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(0, 0, 0, 0.3));
 }
-
 /* Container Principal */
 main.content {
     text-align: center;
@@ -71,14 +66,12 @@ main.content {
     object-fit: contain;
     border: none;
     box-shadow: none;
- transition: transform 0.3s ease; 
+    transition: transform 0.3s ease; 
 }
-
 .profile-img:hover {
     transform: scale(1.05);
     filter: none;
 }
-
 /* Título e Subtítulo */
 .title {
     font-size: 1.5rem;
@@ -86,13 +79,11 @@ main.content {
     margin-bottom: 0.5rem;
     color: var(--primary-color);
 }
-
 .subtitle {
     font-size: 1rem;
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
-
 /* Descrição */
 .description {
     font-size: 0.8rem;
@@ -100,12 +91,10 @@ main.content {
     color: var(--secondary-color);
     margin-bottom: 2rem;
 }
-
 .description strong {
     color: var(--accent-color);
 }
-
-/* Links Sociais */
+/* Links Sociais - Mesmo padrão do menu */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -113,26 +102,25 @@ main.content {
     flex-wrap: wrap;
     margin-bottom: 1rem;
 }
-
 .social-btn {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    background: var(--accent-color);
-    color: white;
+    padding: 0.5rem 0.8rem;
+    background: transparent;
+    color: var(--primary-color);
     text-decoration: none;
-    border-radius: 30px;
-    font-weight: 50;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
-
 .social-btn:hover {
-    background: #5849c4;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
+    color: var(--accent-color);
+    background: rgba(108, 92, 231, 0.1);
+    transform: none;
+    box-shadow: none;
 }
-
 /* Menu de Navegação */
 .nav-menu {
     display: flex;
@@ -141,7 +129,6 @@ main.content {
     flex-wrap: nowrap;
     gap: 0.5rem;
 }
-
 .nav-link {
     text-decoration: none;
     color: var(--primary-color);
@@ -152,23 +139,19 @@ main.content {
     border-radius: 4px;
     white-space: nowrap; 
 }
-
 .nav-link:hover {
     color: var(--accent-color);
     background: rgba(108, 92, 231, 0.1);
 }
-
 .nav-link.active {
     color: var(--accent-color);
     font-weight: 600;
 }
-
 .nav-divider {
     color: var(--accent-color);
     font-size: 1rem;
     opacity: 0.7;
 }
-
 /* Footer */
 footer {
     text-align: center;
@@ -177,7 +160,6 @@ footer {
     font-size: 0.7rem;
     color: var(--secondary-color);
 }
-
 /* Animações */
 @keyframes fadeInDown {
     from {
@@ -189,7 +171,6 @@ footer {
         transform: translateY(0);
     }
 }
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -200,7 +181,6 @@ footer {
         transform: translateY(0);
     }
 }
-
 /* Responsividade */
 @media (max-width: 768px) {
     main.content {
@@ -222,8 +202,10 @@ footer {
     .nav-divider {
         font-size: 1rem;
     }
+    .social-btn {
+        padding: 0.2rem 0.3rem;
+    }
 }
-
 /* Separador com Imagem Abstrata */
 .separator {
     display: flex;
@@ -232,22 +214,18 @@ footer {
     width: 100%;
     margin: 1.5rem 0;
 }
-
 .separator-img {
     width: 100%;
     height: auto;
     opacity: 0.7;
     object-fit: contain;
 }
-
 .separator-img.small {
     max-width: 150px;
 }
-
 .separator-img.large {
     max-width: 500px;
 }
-
 .separator.wide {
     margin: 3rem 0;
 }
