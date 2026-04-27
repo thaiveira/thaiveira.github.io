@@ -138,7 +138,7 @@ main.content {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.5rem;
 }
 
@@ -147,9 +147,10 @@ main.content {
     color: var(--primary-color);
     font-weight: 500;
     font-size: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     transition: all 0.3s ease;
-    border-radius: 5px;
+    border-radius: 4px;
+    white-space: nowrap; 
 }
 
 .nav-link:hover {
@@ -164,7 +165,7 @@ main.content {
 
 .nav-divider {
     color: var(--accent-color);
-    font-size: 0.8rem;
+    font-size: 1rem;
     opacity: 0.7;
 }
 
