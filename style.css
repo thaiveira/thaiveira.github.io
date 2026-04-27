@@ -71,11 +71,13 @@ main.content {
     object-fit: contain;
     border: none;
     box-shadow: none;
-    transition: transform 0.3s ease;
+ transition: transform 0.3s ease, filter 0.3s ease;
+    filter: none; 
 }
 
 .profile-img:hover {
     transform: scale(1.05);
+    filter: none;
 }
 
 /* Título e Subtítulo */
