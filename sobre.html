@@ -26,7 +26,6 @@
             color: #ffffff;
         }
 
-        /* Overlay para melhorar leitura */
         .overlay {
             position: fixed;
             top: 0;
@@ -62,12 +61,13 @@
             margin-bottom: 2rem;
         }
 
-        /* Separador */
         .separator {
             width: 80px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #fff, transparent);
+            height: 3px;
+            background: 
+                url('https://thaiveira.github.io/imagens/abstract_pattern_design_background_2007.jpg') center/cover;
             margin: 2rem auto;
+            border-radius: 2px;
         }
 
         p {
@@ -77,7 +77,6 @@
             margin-bottom: 2rem;
         }
 
-        /* Loader animado */
         .loader {
             display: flex;
             justify-content: center;
@@ -101,7 +100,23 @@
             40% { transform: scale(1); }
         }
 
-    
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 12px 30px;
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
         @media (max-width: 600px) {
             .container {
                 margin: 1rem;
@@ -123,12 +138,4 @@
         <p>Estudando para trazer uma experiência ainda melhor.<br>
         Volte em breve!</p>
         
-        <div class="loader">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-    </div>
-</body>
-</html>
+        <div
