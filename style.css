@@ -64,8 +64,8 @@ main.content {
 }
 
 .profile-img {
-    width: 80%;
-    height: auto;
+    width: auto;
+    height: 80%;
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     object-fit: contain;
