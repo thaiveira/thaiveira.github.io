@@ -62,10 +62,10 @@ main.content {
     margin-bottom: 2rem;
     animation: fadeInDown 1s ease;
 }
-
 .profile-img {
-    width: auto;
-    height: 40%;
+    width: 80%; 
+    max-width: 250px;
+    height: auto;
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     object-fit: contain;
