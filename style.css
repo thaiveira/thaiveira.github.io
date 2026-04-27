@@ -95,7 +95,7 @@ main.content {
 
 /* Descrição */
 .description {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.8;
     color: var(--secondary-color);
     margin-bottom: 2rem;
