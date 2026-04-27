@@ -111,7 +111,7 @@ main.content {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .social-btn {
@@ -122,8 +122,8 @@ main.content {
     background: var(--accent-color);
     color: white;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 500;
+    border-radius: 30px;
+    font-weight: 50;
     transition: all 0.3s ease;
 }
 
