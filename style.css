@@ -63,7 +63,7 @@ main.content {
     animation: fadeInDown 1s ease;
 }
 .profile-img {
-    width: 80%; 
+    width: 90%; 
     max-width: 250px;
     height: auto;
     border-radius: 0 !important;
