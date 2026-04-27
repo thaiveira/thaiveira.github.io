@@ -64,15 +64,14 @@ main.content {
 }
 .profile-img {
     width: 100%; 
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
     object-fit: contain;
     border: none;
     box-shadow: none;
- transition: transform 0.3s ease, filter 0.3s ease;
-    filter: none; 
+ transition: transform 0.3s ease; 
 }
 
 .profile-img:hover {
