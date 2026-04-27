@@ -202,24 +202,24 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .content {
-        padding: 2rem 1.5rem;
+    main.content {
+        padding: 2rem 1rem;
     }
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .profile-img {
         width: 100%;
     }
     .nav-menu {
-        gap: 0.3rem;
+        gap: 0.15rem;
     }
     .nav-link {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.65rem;
+        padding: 0.2rem 0.3rem;
     }
     .nav-divider {
-        font-size: 0.6rem;
+        font-size: 0.4rem;
     }
 }
 
