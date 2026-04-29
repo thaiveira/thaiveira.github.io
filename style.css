@@ -18,6 +18,7 @@ body {
     color: var(--primary-color);
     overflow-x: hidden;
 }
+
 /* Background Animado */
 .background {
     position: fixed;
@@ -39,6 +40,7 @@ body {
     height: 100%;
     background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), rgba(0, 0, 0, 0.3));
 }
+
 /* Container Principal */
 main.content {
     text-align: center;
@@ -52,6 +54,7 @@ main.content {
     overflow: hidden;
     word-wrap: break-word;
 }
+
 /* Seção do Perfil */
 .profile-section {
     margin-bottom: 2rem;
@@ -72,6 +75,7 @@ main.content {
     transform: scale(1.05);
     filter: none;
 }
+
 /* Título e Subtítulo */
 .title {
     font-size: 1.5rem;
@@ -84,6 +88,7 @@ main.content {
     color: var(--secondary-color);
     margin-bottom: 1.5rem;
 }
+
 /* Descrição */
 .description {
     font-size: 0.9rem;
@@ -94,7 +99,8 @@ main.content {
 .description strong {
     color: var(--accent-color);
 }
-/* Links Sociais - Mesmo padrão do menu */
+
+/* Links Sociais */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -121,6 +127,7 @@ main.content {
     transform: none;
     box-shadow: none;
 }
+
 /* Menu de Navegação */
 .nav-menu {
     display: flex;
@@ -152,6 +159,7 @@ main.content {
     font-size: 1rem;
     opacity: 0.7;
 }
+
 /* Footer */
 footer {
     text-align: center;
@@ -160,6 +168,7 @@ footer {
     font-size: 0.7rem;
     color: var(--secondary-color);
 }
+
 /* Animações */
 @keyframes fadeInDown {
     from {
@@ -181,6 +190,7 @@ footer {
         transform: translateY(0);
     }
 }
+
 /* Responsividade */
 @media (max-width: 768px) {
     main.content {
@@ -206,7 +216,8 @@ footer {
         padding: 0.2rem 0.3rem;
     }
 }
-/* Separador com Imagem Abstrata */
+
+/* Separador com Imagem */
 .separator {
     display: flex;
     align-items: center;
