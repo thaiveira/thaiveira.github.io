@@ -253,3 +253,38 @@ footer {
 .separator.wide {
     margin: 3rem 0;
 }
+
+
+/* Galeria de imagens */
+  .row {
+
+    display: flex;
+
+    gap: 16px;             /* espaço entre imagens */
+
+    align-items: center;   /* alinhamento vertical */
+
+    flex-wrap: wrap;       /* quebra para linhas */
+
+  }
+
+  .row img {
+
+    width: 32%;            /* 3 imagens iguais por linha (aprox) */
+
+    height: auto;
+
+    object-fit: cover;     /* mantém proporção e preenche a caixa */
+
+    display: block;
+
+  }
+
+
+  /* Responsivo: empilha em telas pequenas */
+
+  @media (max-width: 600px) {
+
+    .row img { width: 100%; }
+
+  }
