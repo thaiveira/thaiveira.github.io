@@ -89,13 +89,25 @@ main.content {
     margin-bottom: 1.5rem;
 }
 
-/* Descrição */
-.description {
+/* Descrição esquerda */
+.description1 {
     font-size: 0.9rem;
     line-height: 1.8;
     color: var(--secondary-color);
     margin-bottom: 2rem;
     text-align: left
+}
+.description strong {
+    color: var(--accent-color);
+}
+
+/* Descrição centro */
+.description2 {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    text-align: center
 }
 .description strong {
     color: var(--accent-color);
