@@ -95,6 +95,7 @@ main.content {
     line-height: 1.8;
     color: var(--secondary-color);
     margin-bottom: 2rem;
+    text-align: left
 }
 .description strong {
     color: var(--accent-color);
