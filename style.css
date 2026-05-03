@@ -165,19 +165,6 @@ main.content {
     box-shadow: none;
 }
 
-/* Demais links */
-a {
-    color: var(--primary-color);
-    text-decoration: underline!important;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-color: var(--accent-color);
-text-decoration: none!important;
-filter: brightness(1.2);
-}
-
 /* Menu de Navegação */
 .nav-menu {
     display: flex;
