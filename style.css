@@ -141,6 +141,18 @@ main.content {
     box-shadow: none;
 }
 
+/* Demais links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+ color: var(--accent-color);
+filter: brightness(1.2);
+}
+
 /* Menu de Navegação */
 .nav-menu {
     display: flex;
