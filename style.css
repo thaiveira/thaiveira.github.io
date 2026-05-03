@@ -55,6 +55,30 @@ main.content {
     word-wrap: break-word;
 }
 
+/* Separador com Imagem */
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5rem 0;
+}
+.separator-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    object-fit: contain;
+}
+.separator-img.small {
+    max-width: 150px;
+}
+.separator-img.large {
+    max-width: 500px;
+}
+.separator.wide {
+    margin: 3rem 0;
+}
+
 /* Seção do Perfil */
 .profile-section {
     margin-bottom: 2rem;
@@ -256,27 +280,3 @@ footer {
     .row img { width: 100%; }
 
   }
-
-/* Separador com Imagem */
-.separator {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin: 1.5rem 0;
-}
-.separator-img {
-    width: 100%;
-    height: auto;
-    opacity: 0.7;
-    object-fit: contain;
-}
-.separator-img.small {
-    max-width: 150px;
-}
-.separator-img.large {
-    max-width: 500px;
-}
-.separator.wide {
-    margin: 3rem 0;
-}
