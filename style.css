@@ -167,7 +167,7 @@ main.content {
 
 /* Demais links */
 a {
-    color: var(--accent-color);
+    color: var(--primary-color);
     text-decoration: underline!important;
     transition: all 0.3s ease;
 }
@@ -176,12 +176,6 @@ a:hover {
 color: var(--accent-color);
 text-decoration: none!important;
 filter: brightness(1.2);
-}
-
-a:visited {
-
-    color: var(--accent-color);
-    text-decoration:underline!important;
 }
 
 /* Menu de Navegação */
@@ -193,8 +187,8 @@ a:visited {
     gap: 0.5rem;
 }
 .nav-link {
-    text-decoration: none;
-    color: var(--primary-color);
+    text-decoration: none!important;
+    color: var(--primary-color)!important;
     font-weight: 500;
     font-size: 1rem;
     padding: 0.5rem 0.8rem;
@@ -203,15 +197,16 @@ a:visited {
     white-space: nowrap; 
 }
 .nav-link:hover {
-    color: var(--accent-color);
+    color: var(--accent-color)!important;
     background: rgba(108, 92, 231, 0.1);
 }
 .nav-link.active {
-    color: var(--accent-color);
+    color: var(--accent-color)!important;
+    text-decoration: overline!important;
     font-weight: 600;
 }
 .nav-divider {
-    color: var(--accent-color);
+    color: var(--accent-color)!important;
     font-size: 1rem;
     opacity: 0.7;
 }
