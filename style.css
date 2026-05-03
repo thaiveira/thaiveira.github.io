@@ -242,32 +242,33 @@ footer {
     }
 }
 
-/* Galeria de Imagens*/
+/* Galeria de Imagens */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    overflow: hidden;
 }
 
 /* 3 colunas */
 .gallery img {
-    width: calc(33.333% - 7px); 
-    height: 200px;
-    object-fit: cover;
+    width: calc(33.333% - 7px);
+    height: 200px; /* Altura apenas no grid */
+    object-fit: contain;
+    object-position: top;
     display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
     cursor: pointer;
+    background-color: #f5f5f5;
 }
 
-.gallery {
-    overflow: hidden; 
-}
-
+/* Hover */
 .gallery img:hover {
-    transform: scale(1.15); /* Zoom mais sutil mas visível */
+    transform: scale(1.15);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     z-index: 10;
     position: relative;
+    height: auto; /* Remove altura fixa no hover */
 }
 
 /* Galeria 2 colunas */
@@ -283,23 +284,24 @@ footer {
 /* Responsivo - Tablet */
 @media (max-width: 900px) {
     .gallery img {
-        width: calc(50% - 5px); 
+        width: calc(50% - 5px);
+        height: 180px;
     }
     .gallery.cols-4 img {
-        width: calc(50% - 5px); 
+        width: calc(50% - 5px);
     }
 }
 
 /* Responsivo - Celular */
 @media (max-width: 600px) {
     .gallery img {
-        width: calc(50% - 5px); 
+        width: calc(50% - 5px);
+        height: 150px;
     }
     .gallery.cols-2 img,
     .gallery.cols-4 img {
-        width: calc(50% - 5px); 
+        width: calc(50% - 5px);
     }
-    
     .gallery img:active {
         transform: scale(1.1);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
