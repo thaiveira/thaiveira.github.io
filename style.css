@@ -247,13 +247,13 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* 3 colunas */
 .gallery img {
     width: calc(33.333% - 7px);
-    height: 200px; /* Altura apenas no grid */
+    height: 200px;
     object-fit: contain;
     object-position: top;
     display: block;
@@ -333,10 +333,11 @@ footer {
     }
 }
 
-  /* Responsidade: empilha em telas pequenas */
+  /* Responsividade: empilha em telas pequenas */
 
   @media (max-width: 600px) {
 
     .row img { width: 100%; }
 
   }
+}
