@@ -198,6 +198,19 @@ main.content {
     opacity: 0.7;
 }
 
+/* Links nos textos */
+main.content a:not(.nav-link):not(.social-btn) {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+main.content a:not(.nav-link):not(.social-btn):hover {
+    color: var(--accent-color);
+    text-decoration: none;
+    filter: brightness(1.2);
+}
+
 /* Footer */
 footer {
     text-align: center;
@@ -226,6 +239,49 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Galeria de Imagens*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.gallery img {
+    width: calc(33.333% - 11px); /* 3 colunas */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Galeria 2 colunas */
+.gallery.cols-2 img {
+    width: calc(50% - 8px);
+}
+
+/* Galeria 4 colunas */
+.gallery.cols-4 img {
+    width: calc(25% - 12px);
+}
+
+/* Responsivo - Galeria */
+@media (max-width: 600px) {
+    .gallery img,
+    .gallery.cols-2 img,
+    .gallery.cols-4 img {
+        width: 100%;
     }
 }
 
