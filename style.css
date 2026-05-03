@@ -149,14 +149,15 @@ a {
 }
 
 a:hover {
- color: var(--accent-color);
+color: var(--accent-color);
+text-decoration: underline;
 filter: brightness(1.2);
 }
 
 a:visited {
 
     color: var(--accent-color);
-    text-decoration: overline;
+    text-decoration:underline;
 }
 
 /* Menu de Navegação */
