@@ -144,13 +144,19 @@ main.content {
 /* Demais links */
 a {
     color: var(--accent-color);
-    text-decoration: none;
+    text-decoration: underline;
     transition: all 0.3s ease;
 }
 
 a:hover {
  color: var(--accent-color);
 filter: brightness(1.2);
+}
+
+a:visited {
+
+    color: var(--accent-color);
+    text-decoration: overline;
 }
 
 /* Menu de Navegação */
