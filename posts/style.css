@@ -207,13 +207,13 @@ main.content a:not(.nav-link):not(.social-btn) {
 
 main.content a:not(.nav-link):not(.social-btn):hover {
     color: var(--accent-color);
-    text-decoration: none;
+    text-decoration: overline;
     filter: brightness(1.2);
 }
 
 main.content a:not(.nav-link):not(.social-btn):visited {
-    text-decoration: underline;
-    color: var(--primary-color);
+    text-decoration: none;
+    color: var(--accent-color);
 
 }
 
