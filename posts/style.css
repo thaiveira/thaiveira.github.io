@@ -82,7 +82,6 @@ main.content {
 /* Seção do Perfil */
 .profile-section {
     margin-bottom: 2rem;
-    text-align: center;
     animation: fadeInDown 1s ease;
 }
 .profile-img {
@@ -279,6 +278,11 @@ footer {
 /* Galeria 4 colunas */
 .gallery.cols-4 img {
     width: calc(25% - 8px);
+}
+
+.imagem-centralizada {
+    display: block;
+    margin: 0 auto;
 }
 
 /* Responsivo - Tablet */
