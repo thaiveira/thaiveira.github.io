@@ -253,7 +253,6 @@ footer {
 /* 3 colunas */
 .gallery img {
     width: calc(33.333% - 7px);
-    height: 200px;
     object-fit: contain;
     object-position: top;
     display: block;
@@ -269,6 +268,7 @@ footer {
     z-index: 10;
     position: relative;
     height: auto; 
+}
 
 /* Galeria 2 colunas */
 .gallery.cols-2 img {
@@ -284,7 +284,6 @@ footer {
 @media (max-width: 900px) {
     .gallery img {
         width: calc(50% - 5px);
-        height: 180px;
     }
     .gallery.cols-4 img {
         width: calc(50% - 5px);
@@ -295,7 +294,6 @@ footer {
 @media (max-width: 600px) {
     .gallery img {
         width: calc(50% - 5px);
-        height: 150px;
     }
     .gallery.cols-2 img,
     .gallery.cols-4 img {
@@ -340,4 +338,3 @@ footer {
     .row img { width: 100%; }
 
   }
-}
