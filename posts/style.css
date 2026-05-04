@@ -211,11 +211,6 @@ main.content a:not(.nav-link):not(.social-btn):hover {
     filter: brightness(1.2);
 }
 
-main.content a:not(.nav-link):not(.social-btn):visited {
-    text-decoration: none;
-    color: var(--accent-color);
-
-}
 
 /* Footer */
 footer {
