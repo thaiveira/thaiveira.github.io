@@ -200,7 +200,7 @@ main.content {
 
 /* Links nos textos */
 main.content a:not(.nav-link):not(.social-btn) {
-    color: var(--primary-color);
+    color: var(--accent-color);
     text-decoration: underline;
     transition: all 0.3s ease;
 }
@@ -209,6 +209,12 @@ main.content a:not(.nav-link):not(.social-btn):hover {
     color: var(--accent-color);
     text-decoration: none;
     filter: brightness(1.2);
+}
+
+main.content a:not(.nav-link):not(.social-btn):visited {
+    text-decoration: underline;
+    color: var(--primary-color);
+
 }
 
 /* Footer */
