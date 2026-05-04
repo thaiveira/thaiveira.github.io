@@ -82,6 +82,7 @@ main.content {
 /* Seção do Perfil */
 .profile-section {
     margin-bottom: 2rem;
+    text-align: center;
     animation: fadeInDown 1s ease;
 }
 .profile-img {
