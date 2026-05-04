@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog - Thaise Oliveira</title>
+    <link>https://thaiveira.github.io/blog.html</link>
+    <description>Blog sobre hardware, Linux, experimentações diversas, linguagens, design e arte.</description>
+    <language>pt-br</language>
+    <atom:link href="https://thaiveira.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Montando PC pela 1ª vez</title>
+      <link>https://thaiveira.github.io/posts/montando-pc.html</link>
+      <description>Minha experiência montando um PC pela primeira vez.</description>
+    </item>
+    
+    <item>
+      <title>Ter idéias X Fazer acontecer</title>
+      <link>https://thaiveira.github.io/posts/ideiaxfazer.html</link>
+      <description>Reflexão sobre a diferença entre ter idéias e colocá-las em prática.</description>
+    </item>
+    
+    <item>
+      <title>Open source, uma solução</title>
+      <link>https://thaiveira.github.io/posts/foss-solucao.html</link>
+      <description>Discussão sobre software livre e código aberto como solução.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://thaiveira.github.io/posts/hello-world.html</link>
+      <description>Primeiro post do blog - Hello World!</description>
+    </item>
+    
+  </channel>
+</rss>
