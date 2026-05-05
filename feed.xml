@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog - Thaise Oliveira</title>
-    <link>https://thaiveira.github.io/blog.html</link>
+    <link>https://thaiveira.github.io</link>
     <description>Blog sobre hardware, Linux, experimentações diversas, linguagens, design e arte.</description>
     <language>pt-br</language>
     <atom:link href="https://thaiveira.github.io/feed.xml" rel="self" type="application/rss+xml"/>
@@ -13,6 +13,7 @@
       <link>https://thaiveira.github.io/news.html</link>
       <description>Transferência de hospedagem e novo layout.</description>
     </item>
+
     <item>
       <title>Montando PC pela 1ª vez</title>
       <link>https://thaiveira.github.io/posts/montando-pc.html</link>
