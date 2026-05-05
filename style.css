@@ -129,6 +129,12 @@ main.content {
 .description strong {
     color: var(--accent-color);
 }
+/* Imagem Centralizada */
+.imagem-centralizada {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
 /* Links Sociais */
 .social-links {
     display: flex;
