@@ -7,6 +7,7 @@
     <language>pt-br</language>
     <atom:link href="https://thaiveira.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
+    <!-- Post-->
     <item>
       <title>Montando PC pela 1ª vez</title>
       <link>https://thaiveira.github.io/posts/montando-pc.html</link>
