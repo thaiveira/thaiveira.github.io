@@ -51,6 +51,8 @@ main.content {
     animation: fadeInUp 1s ease 0.3s backwards;
     overflow: hidden;
     word-wrap: break-word;
+    flex: 1;
+    width: 100%;
 }
 /* Separador com Imagem */
 .separator {
@@ -207,6 +209,7 @@ main.content a:not(.nav-link):not(.social-btn):hover {
 }
 /* Footer */
 footer {
+    flex-shrink: 0;
     text-align: center;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.8);
