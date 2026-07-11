@@ -8,6 +8,13 @@
     <atom:link href="https://thaiveira.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <!-- Post-->
+
+    <item>
+      <title>Github X Codeberg</title>
+      <link>https://thaiveira.com.br/posts/githubxcodeberg.html</link>
+      <description>GitHub Vs Codeberg: comparações relevantes e como os uso.</description>
+    </item>
+
     <item>
       <title>News 08/06/2026</title>
       <link>https://thaiveira.com.br/indico.html</link>
