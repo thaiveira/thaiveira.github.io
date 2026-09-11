@@ -223,7 +223,6 @@ main > a[href="#"]{
 
 .nav-link.active{
   color: var(--ink);
-  text-decoration: overline!important;
   background: var(--lilac-soft);
   padding: 2px 8px;
 }
