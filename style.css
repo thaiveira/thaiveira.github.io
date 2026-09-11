@@ -90,11 +90,11 @@ h1, .title{
 
 .profile-img{
   max-width: 100%;
-  border: 3px solid var(--ink);
-  box-shadow: var(--shadow);
-  background: var(--card-bg);
-  padding: 6px;
-  border-radius: var(--radius);
+  border: 1px solid var(--lilac-soft);
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 6px;
 }
 
 /* little retro "window" tab above framed images */
@@ -140,17 +140,20 @@ h1, .title{
 /* ---------- text blocks ---------- */
 .description1,
 .description2{
-  background: var(--card-bg);
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow);
-  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  border-left: 3px solid var(--lilac-soft);
+  box-shadow: none;
+  padding: 4px 0 4px 16px;
   margin: 18px 0;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 0.98rem;
 }
 
 .description2{
   text-align: center;
+  border-left: none;
+  padding: 4px 0;
 }
 
 .description1 strong,
@@ -232,18 +235,23 @@ main > a[href="#"]{
   margin: 14px 0;
 }
 
+/* .cols-2 vira só um "sugerido" — o auto-fit acima já se adapta sozinho
+   a qualquer tela, então essa classe não é mais obrigatória */
+
 .gallery img{
   width: 100%;
   height: auto;
   display: block;
-  border: 2px solid var(--ink);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--lilac-soft);
+  border-radius: 4px;
+  box-shadow: none;
   cursor: zoom-in;
-  transition: transform .15s ease;
+  transition: transform .15s ease, border-color .15s ease;
 }
 
 .gallery img:hover{
-  transform: translate(-2px,-2px) rotate(-1deg);
+  transform: translateY(-2px);
+  border-color: var(--lilac);
 }
 
 .gallery img:focus-visible{
@@ -373,7 +381,7 @@ footer{
 }
 
 footer::before{
-  content: "2026 Thaise Oliveira. Feito com HTML + CSS um toque de Java e café";
+  content: "© 2026 Thaise Oliveira. Feito com HTML, CSS, Java e café.";
   display: block;
   color: var(--lilac);
   margin-bottom: 8px;
