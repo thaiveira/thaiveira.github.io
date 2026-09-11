@@ -9,6 +9,11 @@
     
     <!-- Post-->
 
+     <item>
+      <title>News 10/09/2026</title>
+      <link>https://thaiveira.com.br/news.html</link>
+      <description>Novas mudanças no site!</description>
+    </item>
     <item>
       <title>Github Vs Codeberg</title>
       <link>https://thaiveira.com.br/posts/githubxcodeberg.html</link>
