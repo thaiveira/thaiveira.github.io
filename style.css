@@ -201,8 +201,7 @@ main > a[href="#"]{
   align-items: center;
   margin: 24px 0;
   padding: 10px 6px;
-  border-top: 2px dashed var(--ink);
-  border-bottom: 2px dashed var(--ink);
+
 }
 
 .nav-link{
@@ -210,7 +209,7 @@ main > a[href="#"]{
   font-size: 1.2rem;
   letter-spacing: .5px;
   text-transform: lowercase;
-  color: var(--ink);
+  color: var(--lilac-soft);
   text-decoration: none;
   padding: 2px 4px;
   border-bottom: 2px solid transparent;
@@ -218,12 +217,14 @@ main > a[href="#"]{
 
 .nav-link:hover{
   color: var(--lilac);
+  text-decoration: overline!important;
   border-bottom-color: var(--lilac);
 }
 
 .nav-link.active{
-  color: #fff;
-  background: var(--ink);
+  color: var(--ink);
+  text-decoration: overline!important;
+  background: var(--lilac-soft);
   padding: 2px 8px;
 }
 
@@ -232,7 +233,7 @@ main > a[href="#"]{
 }
 
 .nav-divider{
-  color: var(--pink);
+  color: var(--lilac-soft);
 }
 
 /* ---------- gallery (portfolio) ---------- */
@@ -242,9 +243,6 @@ main > a[href="#"]{
   gap: 8px;
   margin: 14px 0;
 }
-
-/* .cols-2 vira só um "sugerido" — o auto-fit acima já se adapta sozinho
-   a qualquer tela, então essa classe não é mais obrigatória */
 
 .gallery img{
   width: 100%;
@@ -270,7 +268,7 @@ main > a[href="#"]{
 }
 
 @media (max-width: 380px){
-  .gallery{ grid-template-columns: repeat(2, 1fr); }
+  .gallery{ grid-template-columns: repeat(4, 1fr); }
 }
 
 /* ---------- lightbox ---------- */
