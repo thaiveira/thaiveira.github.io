@@ -217,7 +217,6 @@ main > a[href="#"]{
 
 .nav-link:hover{
   color: var(--lilac);
-  text-decoration: overline!important;
 }
 
 .nav-link.active{
