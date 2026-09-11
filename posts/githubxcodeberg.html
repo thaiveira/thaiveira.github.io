@@ -35,60 +35,30 @@
         <!-- POST -->
         <div class="description1">
         <p>    
-        Se você trabalha com desenvolvimento web e segurança digital já sabe que a escolha 
-        da plataforma de versionamento não se resume apenas a “qual é mais bonita” 
-        (embora prefira que as coisas sejam, além de funcionais, bonitas) as métricas que estão 
-        por trás das plataformas ditam produtividade, governança e segurança. Neste texto trago 
-        comparações relevantes entre GitHub e Codeberg e, ao fim, vamos entender porque 
-        prefiro Codeberg para projetos de pesquisa pessoais e GitHub para contribuições 
-        para comunidade de código aberto e projetos empresariais.
+        Se você trabalha com desenvolvimento web e segurança digital já sabe que a escolha da plataforma de versionamento não se resume apenas a “qual é mais bonita” (embora prefira que as coisas sejam, além de funcionais, bonitas) as métricas que estão por trás das plataformas ditam produtividade, governança e segurança. Neste texto trago comparações relevantes entre GitHub e Codeberg e, ao fim, vamos entender porque prefiro Codeberg para projetos de pesquisa pessoais e GitHub para contribuições para comunidade de código aberto e projetos empresariais.
         </p>
         <br>
         <p>
         <strong>Ecossistema e maturidade:</strong>
-        GitHub é o maior ecossistema de código aberto, com ampla integração (Actions, Packages, GitHub Copilot, 
-        Codespaces) e enorme visibilidade de projetos. Isso facilita recrutamento, maior comunidade e 
-        integrações. Codeberg é mais modesto com foco em privacidade e software livre, mas possui menos 
-        integrações nativas e menos tráfego de comunidade. Assim, para projetos que dependem de automação 
-        extensa e visibilidade, GitHub tende a ter vantagem.
+        GitHub é o maior ecossistema de código aberto, com ampla integração (Actions, Packages, GitHub Copilot, Codespaces) e enorme visibilidade de projetos. Isso facilita recrutamento, maior comunidade e integrações. Codeberg é mais modesto com foco em privacidade e software livre, mas possui menos integrações nativas e menos tráfego de comunidade. Assim, para projetos que dependem de automação extensa e visibilidade, GitHub tende a ter vantagem.
         </p>
-        <br>
         <p>
         <strong>Segurança e vulnerabilidades:</strong>
-        GitHub oferece alertas de vulnerabilidades em dependências, gestão de senhas e outras políticas 
-        de segurança. Codeberg, por ser baseado em Gitea, tem recursos de segurança mas geralmente não 
-        oferece o mesmo conjunto de vulnerabilidades e a mesma maturidade. 
+        GitHub oferece alertas de vulnerabilidades em dependências, gestão de senhas e outras políticas de segurança. Codeberg, por ser baseado em Gitea, tem recursos de segurança mas geralmente não oferece o mesmo conjunto de vulnerabilidades e a mesma maturidade. 
         </p>
-        <br>
         <p>
         <strong>Controle de acesso e governança:</strong>
-        GitHub oferece modelos de permissão detalhados, logs de auditoria com granularidade e integração para grandes organizações. 
-        Codeberg, dependendo da configuração (especialmente em instalações self-hosted) pode exigir mais configuração manual 
-        para auditoria e controle de acessos em grandes equipes. 
+        GitHub oferece modelos de permissão detalhados, logs de auditoria com granularidade e integração para grandes organizações. Codeberg, dependendo da configuração (especialmente em instalações self-hosted) pode exigir mais configuração manual para auditoria e controle de acessos em grandes equipes. 
         </p>
-        <br>
         <p>
         <strong>Privacidade e retenção de dados:</strong>
-        É aqui que a coisa fica mais complicada… GitHub é um serviço centralizado, hospedado pela Microsoft. 
-        Codeberg tende a enfatizar privacidade e pode ser usado em instâncias próprias ou com foco em dados que não devem 
-        deixar determinados territórios. Se a conformidade regulatória exige controle estrito de dados, Codeberg com instâncias 
-        self-hosted podem oferecer mais controle sobre os dados.
-        Nesse aspecto é muito importante citar a ferramenta de IA do GitHub, o Copilot, que promete acelerar a escrita de código 
-        e manter o fluxo de trabalho ágil (e o maior responsável pela minha escolha pelo Codeberg para projetos pessoais). 
-        Ele integra-se ao editor, sugere trechos, gera funções e ajuda na prototipagem, o que pode aumentar a produtividade da equipe. 
-        Por outro lado, o Copilot pode introduzir código gerado que não segue as diretrizes de segurança da empresa, exigir 
-        revisões adicionais e aumentar a dependência de sugestões de terceiros, o que pode levar a inconsistências de estilo, 
-        problemas em partes do código e menor controle sobre a qualidade do código final.
-        O Copilot também levanta questões de compliance e governança; em ambientes regulados, a automação de código pode dificultar 
-        a rastreabilidade de decisões de implementação, exigir políticas mais rígidas de revisão e exigir validação humana extra. 
-        No Codeberg, sem IA, a equipe ganha em conformidade e controle.
+        É aqui que a coisa fica mais complicada… GitHub é um serviço centralizado, hospedado pela Microsoft. Codeberg tende a enfatizar privacidade e pode ser usado em instâncias próprias ou com foco em dados que não devem deixar determinados territórios. Se a conformidade regulatória exige controle estrito de dados, Codeberg com instâncias 
+        self-hosted podem oferecer mais controle sobre os dados. Nesse aspecto é muito importante citar a ferramenta de IA do GitHub, o Copilot, que promete acelerar a escrita de código e manter o fluxo de trabalho ágil (e o maior responsável pela minha escolha pelo Codeberg para projetos pessoais). Ele integra-se ao editor, sugere trechos, gera funções e ajuda na prototipagem, o que pode aumentar a produtividade da equipe. Por outro lado, o Copilot pode introduzir código gerado que não segue as diretrizes de segurança da empresa, exigir revisões adicionais e aumentar a dependência de sugestões de terceiros, o que pode levar a inconsistências de estilo, problemas em partes do código e menor controle sobre a qualidade do código final. O Copilot também levanta questões de compliance e governança; em ambientes regulados, a automação de código pode dificultar 
+        a rastreabilidade de decisões de implementação, exigir políticas mais rígidas de revisão e exigir validação humana extra. No Codeberg, sem IA, a equipe ganha em conformidade e controle.
         </p>
         <br>
         <p>
-         E foi simples assim que decidi versionar meus projetos pessoais no Codeberg, porém sem abandonar o GitHub 
-         (por exemplo, esse site é um pages no GitHub). Estou em processo de aprendizagem então tenho preferencia em 
-         fazer tudo o menos automatizado possível, para aprender melhor, também sou defensora do movimento Não Seja Um Mono-Ferramenta 
-         como descrevi nesse <a href="https://thaiveira.com.br/posts/foss-solucao.html" target="_blank" rel="noopener noreferrer">outro texto sobre como deveríamos aprender alternativas as bigtechs.</a>   
+         E foi simples assim que decidi versionar meus projetos pessoais no Codeberg, porém sem abandonar o GitHub (por exemplo, esse site é um pages no GitHub). Estou em processo de aprendizagem então tenho preferencia em fazer tudo o menos automatizado possível, para aprender melhor, também sou defensora do movimento Não Seja Um Mono-Ferramenta como descrevi nesse <a href="https://thaiveira.com.br/posts/foss-solucao.html" target="_blank" rel="noopener noreferrer">outro texto sobre como deveríamos aprender alternativas as bigtechs.</a>   
         </p>
         <p>
         Até o próximo texto!  
