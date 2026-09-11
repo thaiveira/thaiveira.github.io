@@ -63,7 +63,10 @@ body{
   z-index: 1;
   max-width: 640px;
   margin: 48px auto;
-  padding: 0 20px 40px;
+  padding: 32px 28px 40px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 10px 34px rgba(23,21,31,0.10);
 }
 
 /* ---------- headings ---------- */
@@ -90,7 +93,7 @@ h1, .title{
 
 .profile-img{
   max-width: 100%;
-  border: 1px solid var(--lilac-soft);
+  border: none;
   box-shadow: none;
   background: transparent;
   padding: 0;
@@ -230,8 +233,8 @@ main > a[href="#"]{
 /* ---------- gallery (portfolio) ---------- */
 .gallery{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
   margin: 14px 0;
 }
 
@@ -240,18 +243,20 @@ main > a[href="#"]{
 
 .gallery img{
   width: 100%;
-  height: auto;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
-  border: 1px solid var(--lilac-soft);
+  border: none;
   border-radius: 4px;
   box-shadow: none;
   cursor: zoom-in;
-  transition: transform .15s ease, border-color .15s ease;
+  transition: transform .15s ease, opacity .15s ease;
 }
 
 .gallery img:hover{
   transform: translateY(-2px);
-  border-color: var(--lilac);
+  opacity: .9;
 }
 
 .gallery img:focus-visible{
@@ -260,7 +265,7 @@ main > a[href="#"]{
 }
 
 @media (max-width: 380px){
-  .gallery{ grid-template-columns: 1fr; }
+  .gallery{ grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---------- lightbox ---------- */
@@ -383,7 +388,7 @@ footer{
 footer::before{
   content: "© 2026 Thaise Oliveira. Feito com HTML, CSS, Java e café.";
   display: block;
-  color: var(--lilac);
+  color: var(--ink);
   margin-bottom: 8px;
   letter-spacing: 2px;
 }
