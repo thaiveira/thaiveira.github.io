@@ -107,23 +107,28 @@ h1, .title{
 }
 
 /* ---------- separators ---------- */
-.separator{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 22px auto;
-  max-width: 320px;
+/* Separador com Imagem */
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5rem 0;
 }
-
-.separator.wide{
-  max-width: 100%;
+.separator-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    object-fit: contain;
 }
-
-.separator-img{
-  width: 100%;
-  height: auto;
-  image-rendering: pixelated;   /* mantém os quadradinhos nítidos mesmo esticando */
-  image-rendering: -moz-crisp-edges;
+.separator-img.small {
+    max-width: 150px;
+}
+.separator-img.large {
+    max-width: 500px;
+}
+.separator.wide {
+    margin: 3rem 0;
 }
 
 /* Alternativa sem imagem nenhuma: um divisor 100% ASCII/CSS.
