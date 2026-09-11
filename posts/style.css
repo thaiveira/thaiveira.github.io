@@ -22,7 +22,6 @@
   color: #fff;
 }
 
-/* scrollbar (webkit) */
 ::-webkit-scrollbar{ width: 10px; }
 ::-webkit-scrollbar-track{ background: var(--bg); }
 ::-webkit-scrollbar-thumb{
@@ -47,7 +46,7 @@ body{
   overflow-x: hidden;
 }
 
-/* faint fixed decoration layer behind everything (also used by effects.js) */
+/* effects.js */
 .background{
   position: fixed;
   inset: 0;
@@ -69,7 +68,6 @@ body{
   box-shadow: 0 10px 34px rgba(23,21,31,0.10);
 }
 
-/* ---------- headings ---------- */
 h1, .title{
   font-family: 'VT323', monospace;
   font-size: 2.4rem;
@@ -84,7 +82,6 @@ h1, .title{
   color: var(--lilac);
 }
 
-/* ---------- profile / images ---------- */
 .profile-section{
   display: flex;
   justify-content: center;
@@ -100,14 +97,11 @@ h1, .title{
   border-radius: 6px;
 }
 
-/* little retro "window" tab above framed images */
 .profile-section::before{
   content: "";
   display: none;
 }
 
-/* ---------- separators ---------- */
-/* Separador com Imagem */
 .separator {
     display: flex;
     align-items: center;
@@ -131,7 +125,7 @@ h1, .title{
     margin: 3rem 0;
 }
 
-/* Alternativa sem imagem nenhuma: um divisor 100% ASCII/CSS.
+/* divisor 100% ASCII/CSS.
    Para usar, troque o <img class="separator-img" ...> por:
    <div class="divider-ascii">· ⋆ ✦ ⋆ · ⋆ ✦ ⋆ ·</div>            */
 .divider-ascii{
@@ -145,7 +139,6 @@ h1, .title{
   user-select: none;
 }
 
-/* ---------- text blocks ---------- */
 .description1,
 .description2{
   background: transparent;
@@ -183,7 +176,6 @@ h1, .title{
   border-bottom-style: solid;
 }
 
-/* back-to-top style arrows like "↑" links */
 main > a[href="#"]{
   display: inline-block;
   margin: 4px 0 12px;
@@ -192,7 +184,6 @@ main > a[href="#"]{
   border: none !important;
 }
 
-/* ---------- nav ---------- */
 .nav-menu{
   display: flex;
   flex-wrap: wrap;
@@ -233,7 +224,6 @@ main > a[href="#"]{
   color: var(--lilac-soft);
 }
 
-/* ---------- gallery (portfolio) ---------- */
 .gallery{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
@@ -268,7 +258,6 @@ main > a[href="#"]{
   .gallery{ grid-template-columns: repeat(4, 1fr); }
 }
 
-/* ---------- lightbox ---------- */
 .lightbox-overlay{
   position: fixed;
   inset: 0;
@@ -361,7 +350,6 @@ main > a[href="#"]{
   }
 }
 
-/* tech/design badges on portfolio.html */
 main > img[src*="shields.io"]{
   margin: 2px 3px;
   filter: grayscale(35%);
@@ -372,7 +360,6 @@ main > img[src*="shields.io"]:hover{
   filter: grayscale(0%);
 }
 
-/* ---------- footer ---------- */
 footer{
   position: relative;
   z-index: 1;
@@ -397,7 +384,7 @@ footer p{
   margin: 4px 0;
 }
 
-/* sparkle decoration spans injected by effects.js */
+/* sparkle effects.js */
 .sparkle{
   position: fixed;
   pointer-events: none;
@@ -426,7 +413,7 @@ footer p{
   to{ transform: translateY(-24px); opacity: 0; }
 }
 
-/* ---------- navegação entre posts (anterior / topo / próximo) ---------- */
+/* ---------- navegação entre posts do blog ---------- */
 .post-nav{
   display: flex;
   align-items: center;
