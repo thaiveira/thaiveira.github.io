@@ -1,6 +1,3 @@
-// gallery.js — lightbox simples para as imagens de .gallery (portfolio)
-// Sem dependências externas. Não faz nada se a página não tiver .gallery.
-
 document.addEventListener('DOMContentLoaded', () => {
   const images = Array.from(document.querySelectorAll('.gallery img'));
   if (images.length === 0) return;

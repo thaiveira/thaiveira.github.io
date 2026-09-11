@@ -1,6 +1,3 @@
-// effects.js — pequenos toques "indie web" inspirados em ellesho.me/page
-// Sem dependências externas. Seguro para rodar em qualquer página do site.
-
 document.addEventListener('DOMContentLoaded', () => {
   const bg = document.querySelector('.background');
   if (bg) {
@@ -17,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // rastro discreto de estrelinhas ao mover o mouse (throttled)
   let last = 0;
   window.addEventListener('mousemove', (e) => {
     const now = Date.now();
