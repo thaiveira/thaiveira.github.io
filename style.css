@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --bg: #fdfbf6;
+  --bg-dot: #e9e2f7;
+  --ink: #17151f;
+  --lilac: #8a6bd1;
+  --lilac-soft: #c9b6f2;
+  --pink: #ff9fc7;
+  --line: #17151f;
+  --card-bg: #ffffff;
+  --shadow: 4px 4px 0 var(--ink);
+  --radius: 2px;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+::selection{
+  background: var(--lilac);
+  color: #fff;
+}
+
+/* scrollbar (webkit) */
+::-webkit-scrollbar{ width: 10px; }
+::-webkit-scrollbar-track{ background: var(--bg); }
+::-webkit-scrollbar-thumb{
+  background: var(--lilac-soft);
+  border: 2px solid var(--ink);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Space Mono', 'Poppins', monospace;
+  color: var(--ink);
+  background: var(--bg);
+  background-image:
+    radial-gradient(var(--bg-dot) 1px, transparent 1px);
+  background-size: 18px 18px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* faint fixed decoration layer behind everything (also used by effects.js) */
+.background{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(255,159,199,0.25), transparent 40%),
+    radial-gradient(circle at 92% 88%, rgba(138,107,209,0.22), transparent 40%);
+}
+
+.content{
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 48px auto;
+  padding: 0 20px 40px;
+}
+
+/* ---------- headings ---------- */
+h1, .title{
+  font-family: 'VT323', monospace;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  margin: 28px 0 12px;
+  color: var(--ink);
+}
+
+.title::before{
+  content: "// ";
+  color: var(--lilac);
+}
+
+/* ---------- profile / images ---------- */
+.profile-section{
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 20px;
+}
+
+.profile-img{
+  max-width: 100%;
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+  padding: 6px;
+  border-radius: var(--radius);
+}
+
+/* little retro "window" tab above framed images */
+.profile-section::before{
+  content: "";
+  display: none;
+}
+
+/* ---------- separators ---------- */
+.separator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 22px auto;
+  max-width: 320px;
+}
+
+.separator.wide{
+  max-width: 100%;
+}
+
+.separator-img{
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;   /* mantém os quadradinhos nítidos mesmo esticando */
+  image-rendering: -moz-crisp-edges;
+}
+
+/* Alternativa sem imagem nenhuma: um divisor 100% ASCII/CSS.
+   Para usar, troque o <img class="separator-img" ...> por:
+   <div class="divider-ascii">· ⋆ ✦ ⋆ · ⋆ ✦ ⋆ ·</div>            */
+.divider-ascii{
+  text-align: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.3rem;
+  letter-spacing: 6px;
+  color: var(--lilac);
+  margin: 22px auto;
+  max-width: 320px;
+  user-select: none;
+}
+
+/* ---------- text blocks ---------- */
+.description1,
+.description2{
+  background: var(--card-bg);
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  margin: 18px 0;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.description2{
+  text-align: center;
+}
+
+.description1 strong,
+.description2 strong{
+  color: var(--lilac);
+}
+
+.description1 a,
+.description2 a,
+.content a{
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px dotted var(--lilac);
+  transition: color .15s ease, border-color .15s ease;
+}
+
+.content a:hover{
+  color: var(--lilac);
+  border-bottom-style: solid;
+}
+
+/* back-to-top style arrows like "↑" links */
+main > a[href="#"]{
+  display: inline-block;
+  margin: 4px 0 12px;
+  font-family: 'VT323', monospace;
+  font-size: 1.4rem;
+  border: none !important;
+}
+
+/* ---------- nav ---------- */
+.nav-menu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin: 24px 0;
+  padding: 10px 6px;
+  border-top: 2px dashed var(--ink);
+  border-bottom: 2px dashed var(--ink);
+}
+
+.nav-link{
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  letter-spacing: .5px;
+  text-transform: lowercase;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 2px 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover{
+  color: var(--lilac);
+  border-bottom-color: var(--lilac);
+}
+
+.nav-link.active{
+  color: #fff;
+  background: var(--ink);
+  padding: 2px 8px;
+}
+
+.nav-link.active::before{
+  content: "▸ ";
+}
+
+.nav-divider{
+  color: var(--pink);
+}
+
+/* ---------- gallery (portfolio) ---------- */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.gallery img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid var(--ink);
+  box-shadow: var(--shadow);
+  cursor: zoom-in;
+  transition: transform .15s ease;
+}
+
+.gallery img:hover{
+  transform: translate(-2px,-2px) rotate(-1deg);
+}
+
+.gallery img:focus-visible{
+  outline: 3px solid var(--lilac);
+  outline-offset: 2px;
+}
+
+@media (max-width: 380px){
+  .gallery{ grid-template-columns: 1fr; }
+}
+
+/* ---------- lightbox ---------- */
+.lightbox-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(23,21,31,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+}
+
+.lightbox-overlay.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-figure{
+  position: relative;
+  max-width: min(90vw, 720px);
+  max-height: 85vh;
+}
+
+.lightbox-figure img{
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border: 3px solid #fff;
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.6);
+  background: var(--card-bg);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next{
+  position: fixed;
+  font-family: 'VT323', monospace;
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #fff;
+  background: var(--ink);
+  border: 2px solid #fff;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.lightbox-close{
+  top: 18px;
+  right: 18px;
+}
+
+.lightbox-prev,
+.lightbox-next{
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev{ left: 12px; }
+.lightbox-next{ right: 12px; }
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover{
+  background: var(--lilac);
+  border-color: var(--ink);
+}
+
+.lightbox-counter{
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'VT323', monospace;
+  font-size: 1.1rem;
+  color: #fff;
+  background: var(--ink);
+  padding: 3px 10px;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 560px){
+  .lightbox-prev,
+  .lightbox-next{
+    padding: 4px 9px;
+    font-size: 1.4rem;
+  }
+}
+
+/* tech/design badges on portfolio.html */
+main > img[src*="shields.io"]{
+  margin: 2px 3px;
+  filter: grayscale(35%);
+  transition: filter .15s ease;
+}
+
+main > img[src*="shields.io"]:hover{
+  filter: grayscale(0%);
+}
+
+/* ---------- footer ---------- */
+footer{
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  font-size: 1.05rem;
+  padding: 24px 12px 40px;
+  border-top: 2px dashed var(--ink);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+footer::before{
+  content: "(⸝⸝•.•⸝⸝) ✦ (⸝⸝•.•⸝⸝)";
+  display: block;
+  color: var(--lilac);
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+}
+
+footer p{
+  margin: 4px 0;
+}
+
+/* sparkle decoration spans injected by effects.js */
+.sparkle{
+  position: fixed;
+  pointer-events: none;
+  z-index: 2;
+  color: var(--lilac);
+  font-size: 14px;
+  animation: twinkle 1.8s ease-in-out infinite;
+  user-select: none;
+}
+
+@keyframes twinkle{
+  0%, 100%{ opacity: .15; transform: scale(.8); }
+  50%{ opacity: 1; transform: scale(1.15); }
+}
+
+.cursor-star{
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+  font-size: 14px;
+  color: var(--pink);
+  animation: floatUp .7s ease-out forwards;
+}
+
+@keyframes floatUp{
+  to{ transform: translateY(-24px); opacity: 0; }
+}
