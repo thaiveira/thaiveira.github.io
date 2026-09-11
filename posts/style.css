@@ -425,3 +425,48 @@ footer p{
 @keyframes floatUp{
   to{ transform: translateY(-24px); opacity: 0; }
 }
+
+/* ---------- navegação entre posts (anterior / topo / próximo) ---------- */
+.post-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 4px 0 16px;
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;
+}
+
+.post-nav-link{
+  color: var(--ink);
+  text-decoration: none;
+  border: none !important;
+  white-space: nowrap;
+}
+
+.post-nav-link:hover{
+  color: var(--lilac);
+}
+
+.post-nav-link.is-disabled{
+  color: var(--lilac-soft);
+  pointer-events: none;
+}
+
+.post-nav-top{
+  color: var(--ink);
+  text-decoration: none;
+  border: none !important;
+  font-size: 1.4rem;
+}
+
+.post-nav-top:hover{
+  color: var(--lilac);
+}
+
+.post-nav-prev{ text-align: left; }
+.post-nav-next{ text-align: right; }
+
+@media (max-width: 420px){
+  .post-nav{ font-size: 1.05rem; }
+}
