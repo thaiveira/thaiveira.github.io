@@ -385,7 +385,7 @@ footer{
   font-family: 'VT323', monospace;
   font-size: 1.05rem;
   padding: 24px 12px 40px;
-  border-top: 2px dashed var(--ink);
+  
   max-width: 640px;
   margin: 0 auto;
 }
