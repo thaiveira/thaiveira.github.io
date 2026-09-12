@@ -23,10 +23,10 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependências
-        run: pip install -r metricas/requirements.txt
+        run: pip install -r scripts/metricas/requirements.txt
 
       - name: Rodar o script de métricas
-        run: python3 metricas/gerar_metricas.py
+        run: python3 scripts/metricas/gerar_metricas.py
         env:
           # Token automático do próprio GitHub Actions — evita o limite de
           # 60 requisições/hora que existiria sem autenticação.
@@ -36,6 +36,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add metricas/imagens metricas/metrics_summary.json
+          git add imagens/commits.svg imagens/linguagens.svg imagens/estudos.svg scripts/metricas/metrics_summary.json
           git diff --staged --quiet || git commit -m "Atualiza métricas do site (automático, mensal)"
           git push
