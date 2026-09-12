@@ -3,12 +3,11 @@ name: Atualizar métricas do site
 on:
   schedule:
     # Roda às 09:00 (horário de Brasília, UTC-3) do dia 1 de cada mês.
-    # Cron usa UTC, por isso 12:00 UTC = 09:00 em Brasília.
     - cron: "0 12 1 * *"
-  workflow_dispatch: {}  # permite rodar manualmente pela aba "Actions" no GitHub
+  workflow_dispatch: {} 
 
 permissions:
-  contents: write  # necessário para o workflow poder commitar de volta no repositório
+  contents: write  
 
 jobs:
   atualizar-metricas:
@@ -28,8 +27,7 @@ jobs:
       - name: Rodar o script de métricas
         run: python3 scripts/metricas/gerar_metricas.py
         env:
-          # Token automático do próprio GitHub Actions — evita o limite de
-          # 60 requisições/hora que existiria sem autenticação.
+        
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commitar os gráficos atualizados

@@ -1,30 +1,4 @@
-"""
-gerar_metricas.py
 
-Busca dados REAIS de atividade nos seus perfis do GitHub e Codeberg via API,
-combina com o registro manual de horas de estudo, calcula métricas com pandas
-e gera os gráficos do dashboard (metricas.html), estilizados com a paleta do site.
-
-APIs usadas:
-  - GitHub REST API:   https://docs.github.com/en/rest/repos/repos
-      GET /users/{user}/repos
-      GET /repos/{owner}/{repo}/languages
-      GET /repos/{owner}/{repo}/commits
-  - Codeberg (Forgejo/Gitea API v1): https://codeberg.org/api/swagger
-      GET /users/{user}/repos
-      GET /repos/{owner}/{repo}/languages
-      GET /repos/{owner}/{repo}/commits
-
-Sem autenticação, o GitHub limita a 60 requisições/hora por IP — suficiente pra
-rodar 1x por mês, mas se algum dia der erro 403 (rate limit), defina a variável
-de ambiente GITHUB_TOKEN (o workflow do GitHub Actions já faz isso sozinho,
-usando o token automático da própria Action).
-
-Este script assume que é executado a partir da RAIZ do repositório (é assim
-que o GitHub Actions já roda por padrão, e é como o workflow deste projeto
-está configurado) — não da pasta onde o próprio script está salvo.
-  python3 scripts/metricas/gerar_metricas.py
-"""
 
 import json
 import os
@@ -37,17 +11,17 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-# Caminhos relativos à raiz do repositório (não à pasta deste arquivo)
+
 DATA_DIR = "scripts/metricas/data"
-IMG_DIR = "imagens"                       # pasta de imagens que o site já usa
+IMG_DIR = "imagens"                       
 RESUMO_PATH = "scripts/metricas/metrics_summary.json"
 
 GITHUB_USER = "thaiveira"
 CODEBERG_USER = "thaiveira"
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")  # opcional; setado automaticamente pelo GitHub Actions
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")  
 MESES_HISTORICO = 6
 
-# Paleta extraída do CSS do site (:root)
+
 COR_INK = "#17151f"
 COR_LILAC = "#8a6bd1"
 COR_LILAC_SOFT = "#c9b6f2"
@@ -78,7 +52,7 @@ def github_headers():
 
 
 def paginar(url, headers=None, params=None):
-    """Percorre um endpoint paginado (GitHub e Codeberg usam o mesmo padrão) até acabar."""
+
     resultados = []
     page = 1
     params = dict(params or {})
@@ -142,7 +116,7 @@ def fetch_codeberg_linguagens(repo_full_name):
 # ---------- agregação ----------
 
 def coletar_atividade():
-    """Combina repositórios do GitHub e do Codeberg: commits/mês e bytes por linguagem."""
+   
     desde = (datetime.now(timezone.utc) - timedelta(days=30 * MESES_HISTORICO)).replace(
         day=1, hour=0, minute=0, second=0, microsecond=0
     )
@@ -156,7 +130,7 @@ def coletar_atividade():
             continue  # ignora repositórios que são fork de outra pessoa
         nome = repo["full_name"]
         for c in fetch_github_commits(nome, desde_iso):
-            data = c["commit"]["author"]["date"][:7]  # "AAAA-MM"
+            data = c["commit"]["author"]["date"][:7]
             commits_por_mes[data] += 1
         for lang, n_bytes in fetch_github_linguagens(nome).items():
             linguagens_bytes[lang] += n_bytes
