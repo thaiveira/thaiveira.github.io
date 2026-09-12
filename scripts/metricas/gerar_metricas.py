@@ -25,7 +25,6 @@ MESES_HISTORICO = 6
 MESES_PT = ["", "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
             "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
 
-
 COR_BG = "#fdfbf6"
 COR_INK = "#17151f"
 COR_LILAC = "#8a6bd1"
@@ -55,8 +54,10 @@ plt.rcParams.update({
     "savefig.facecolor": COR_BG,
 })
 
+
+# ---------- moldura + pontinhos de canto (visual pixel-art) ----------
+
 def desenhar_moldura(fig, cores_canto=(COR_LILAC_SOFT, COR_PINK)):
-  
     borda = FancyBboxPatch(
         (0.008, 0.012), 0.984, 0.976,
         boxstyle="round,pad=0,rounding_size=0.03",
@@ -65,7 +66,7 @@ def desenhar_moldura(fig, cores_canto=(COR_LILAC_SOFT, COR_PINK)):
     )
     fig.add_artist(borda)
 
-    n = 6  # tamanho do bloco de pontinhos (n x n) em cada canto
+    n = 6  
     passo = 0.014
     cantos = [(0.02, 0.965, 1, -1), (0.98, 0.965, -1, -1),
               (0.02, 0.035, 1, 1), (0.98, 0.035, -1, 1)]
@@ -189,7 +190,6 @@ def coletar_atividade():
         for lang, n_bytes in fetch_codeberg_linguagens(nome).items():
             linguagens_bytes[lang] += n_bytes
 
-
     for mes in janela:
         commits_por_mes.setdefault(mes, 0)
     commits_por_mes = {m: commits_por_mes[m] for m in janela}
@@ -247,7 +247,7 @@ def grafico_linguagens(linguagens_bytes):
 
     total = sum(linguagens_bytes.values()) or 1
     df = pd.DataFrame(
-        [(lang, round(n * 100 / total, 1)) for lang, n in linguagens_bytes.items()],
+        [(lang, round(n * 100 / total, 3)) for lang, n in linguagens_bytes.items()],
         columns=["linguagem", "porcentagem"],
     ).sort_values("porcentagem", ascending=False).head(8)
     df = df.sort_values("porcentagem", ascending=True)
@@ -263,8 +263,9 @@ def grafico_linguagens(linguagens_bytes):
     ax.text(0.0, 1.06, "linguagem", transform=ax.transAxes, fontproperties=FONTE_TITULO, fontsize=16)
     ax.set_xlabel("%", fontproperties=FONTE_MONO, fontsize=13, labelpad=10)
     for rect, v in zip(barras, df["porcentagem"]):
+        texto = f"{v:.3f}%" if v < 1 else (f"{v:.2f}%" if v < 10 else f"{v:.1f}%")
         ax.text(rect.get_width() + total * 0 + 1.2, rect.get_y() + rect.get_height() / 2,
-                f"{v}%", va="center", fontproperties=FONTE_MONO, fontsize=11)
+                texto, va="center", fontproperties=FONTE_MONO, fontsize=11)
     plt.setp(ax.get_xticklabels(), fontproperties=FONTE_MONO, fontsize=11)
     plt.setp(ax.get_yticklabels(), fontproperties=FONTE_MONO, fontsize=11)
 
