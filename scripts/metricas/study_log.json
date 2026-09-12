@@ -1,12 +1,11 @@
 {
-  "_nota": "Dados de exemplo. Edite este arquivo manualmente conforme for estudando, ou conecte a uma planilha/Notion via API depois.",
   "horas_por_topico": [
     {"topico": "Python", "horas": 62},
     {"topico": "Dados / Pandas", "horas": 34},
     {"topico": "Cloud", "horas": 21},
     {"topico": "HTML/CSS", "horas": 48},
     {"topico": "Versionamento (Git)", "horas": 19},
-    {"topico": "UX/UI", "horas": 27}
+    {"topico": "UX/UI", "horas": 27},
     {"topico": "Java", "horas": 2}
   ]
 }
