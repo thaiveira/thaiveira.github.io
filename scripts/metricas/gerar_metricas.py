@@ -1,33 +1,3 @@
-"""
-gerar_metricas.py
-
-Roda LOCALMENTE (dentro da sua .venv), no fim de cada mês. Busca dados reais
-de atividade no GitHub e no Codeberg, mais o registro manual de horas de
-estudo, e gera os gráficos do dashboard (metricas.html) no visual
-pixel-art/lilás do site.
-
-Janela de tempo: sempre os ÚLTIMOS 6 MESES a partir de hoje. Não precisa
-apagar nada manualmente — a cada execução o mês mais antigo sai sozinho e o
-mês novo entra, porque a janela é recalculada a partir da data atual.
-
-Como usar:
-  1. Ative sua .venv
-  2. pip install -r requirements.txt
-  3. Rode a partir da RAIZ do repositório do site:
-       python3 scripts/metricas/gerar_metricas.py
-  4. Confira os SVGs em imagens/, depois faça o commit manualmente:
-       git add imagens/commits.svg imagens/linguagens.svg imagens/estudos.svg scripts/metricas/metrics_summary.json
-       git commit -m "Atualiza métricas (mensal)"
-       git push
-
-APIs usadas (sem necessidade de token para poucas dezenas de repositórios):
-  - GitHub REST API:    GET /users/{user}/repos, /repos/{o}/{r}/languages, /repos/{o}/{r}/commits
-  - Codeberg (Gitea v1): GET /users/{user}/repos, /repos/{o}/{r}/languages, /repos/{o}/{r}/commits
-  Se um dia bater o limite de 60 req/hora do GitHub sem token, gere um em
-  https://github.com/settings/tokens (permissão "public_repo" já basta) e
-  exporte antes de rodar: export GITHUB_TOKEN=seu_token_aqui
-"""
-
 import json
 import os
 import calendar
@@ -55,7 +25,7 @@ MESES_HISTORICO = 6
 MESES_PT = ["", "Jan", "Fev", "Mar", "Abr", "Mai", "Jun",
             "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
 
-# ---------- paleta e estilo (do CSS do site) ----------
+
 COR_BG = "#fdfbf6"
 COR_INK = "#17151f"
 COR_LILAC = "#8a6bd1"
@@ -64,9 +34,6 @@ COR_PINK = "#ff9fc7"
 
 FONTE_MONO = fm.FontProperties(family="DejaVu Sans Mono", weight="bold")
 
-# VT323 (a mesma fonte de título do site) para os títulos dos gráficos e os
-# rótulos de coluna, tipo "commits" / "linguagem" / "tópico". Coloque o
-# arquivo .ttf em scripts/metricas/fonts/VT323-Regular.ttf.
 CAMINHO_VT323 = os.path.join("scripts", "metricas", "fonts", "VT323-Regular.ttf")
 if os.path.exists(CAMINHO_VT323):
     fm.fontManager.addfont(CAMINHO_VT323)
@@ -88,11 +55,8 @@ plt.rcParams.update({
     "savefig.facecolor": COR_BG,
 })
 
-
-# ---------- moldura + pontinhos de canto (visual pixel-art) ----------
-
 def desenhar_moldura(fig, cores_canto=(COR_LILAC_SOFT, COR_PINK)):
-    """Borda arredondada grossa + pontilhado nos 4 cantos, imitando o mockup."""
+  
     borda = FancyBboxPatch(
         (0.008, 0.012), 0.984, 0.976,
         boxstyle="round,pad=0,rounding_size=0.03",
@@ -188,7 +152,6 @@ def fetch_codeberg_linguagens(repo_full_name):
 
 
 def meses_da_janela(n=MESES_HISTORICO):
-    """Últimos n meses (AAAA-MM), sempre recalculado a partir de hoje."""
     hoje = datetime.now(timezone.utc)
     y, m = hoje.year, hoje.month
     meses = []
@@ -226,7 +189,7 @@ def coletar_atividade():
         for lang, n_bytes in fetch_codeberg_linguagens(nome).items():
             linguagens_bytes[lang] += n_bytes
 
-    # garante que todo mês da janela apareça no gráfico, mesmo com 0 commits
+
     for mes in janela:
         commits_por_mes.setdefault(mes, 0)
     commits_por_mes = {m: commits_por_mes[m] for m in janela}
@@ -278,6 +241,10 @@ def grafico_commits(commits_por_mes):
 
 
 def grafico_linguagens(linguagens_bytes):
+    linguagens_bytes = dict(linguagens_bytes)
+    if "Jupyter Notebook" in linguagens_bytes:
+        linguagens_bytes["Python"] = linguagens_bytes.get("Python", 0) + linguagens_bytes.pop("Jupyter Notebook")
+
     total = sum(linguagens_bytes.values()) or 1
     df = pd.DataFrame(
         [(lang, round(n * 100 / total, 1)) for lang, n in linguagens_bytes.items()],
