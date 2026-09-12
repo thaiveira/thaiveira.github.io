@@ -1,0 +1,41 @@
+name: Atualizar métricas do site
+
+on:
+  schedule:
+    # Roda às 09:00 (horário de Brasília, UTC-3) do dia 1 de cada mês.
+    # Cron usa UTC, por isso 12:00 UTC = 09:00 em Brasília.
+    - cron: "0 12 1 * *"
+  workflow_dispatch: {}  # permite rodar manualmente pela aba "Actions" no GitHub
+
+permissions:
+  contents: write  # necessário para o workflow poder commitar de volta no repositório
+
+jobs:
+  atualizar-metricas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r metricas/requirements.txt
+
+      - name: Rodar o script de métricas
+        run: python3 metricas/gerar_metricas.py
+        env:
+          # Token automático do próprio GitHub Actions — evita o limite de
+          # 60 requisições/hora que existiria sem autenticação.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commitar os gráficos atualizados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add metricas/imagens metricas/metrics_summary.json
+          git diff --staged --quiet || git commit -m "Atualiza métricas do site (automático, mensal)"
+          git push
