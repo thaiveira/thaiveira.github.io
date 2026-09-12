@@ -58,7 +58,7 @@ def paginar(url, headers=None, params=None):
     params = dict(params or {})
     while True:
         params["page"] = page
-        resp = requests.get(url, headers=headers, params=params, timeout=20)
+        resp = requests.get(url, headers=headers, params=params, timeout=30)
         resp.raise_for_status()
         dados = resp.json()
         if not dados:
