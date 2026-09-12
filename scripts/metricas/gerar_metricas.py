@@ -1,5 +1,16 @@
 """
 gerar_metricas.py
+
+Roda LOCALMENTE (dentro da sua .venv), no fim de cada mês. Busca dados reais
+de atividade no GitHub e no Codeberg, mais o registro manual de horas de
+estudo, e gera os gráficos do dashboard (metricas.html) no visual
+pixel-art/lilás do site.
+
+Janela de tempo: sempre os ÚLTIMOS 6 MESES a partir de hoje. Não precisa
+apagar nada manualmente — a cada execução o mês mais antigo sai sozinho e o
+mês novo entra, porque a janela é recalculada a partir da data atual.
+
+Como usar:
   1. Ative sua .venv
   2. pip install -r requirements.txt
   3. Rode a partir da RAIZ do repositório do site:
@@ -32,7 +43,7 @@ import matplotlib.font_manager as fm
 from matplotlib.patches import FancyBboxPatch
 
 # Caminhos relativos à raiz do repositório (rode o script de lá)
-DATA_DIR = "scripts/metricas/data"
+DATA_DIR = "scripts/metricas"
 IMG_DIR = "imagens"
 RESUMO_PATH = "scripts/metricas/metrics_summary.json"
 
