@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let current = 0;
 
-  // monta o overlay uma única vez
   const overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
   overlay.innerHTML = `

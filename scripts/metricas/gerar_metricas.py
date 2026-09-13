@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 from matplotlib.patches import FancyBboxPatch
 
-# Caminhos relativos à raiz do repositório (rode o script de lá)
 DATA_DIR = "scripts/metricas"
 IMG_DIR = "imagens"
 RESUMO_PATH = "scripts/metricas/metrics_summary.json"
