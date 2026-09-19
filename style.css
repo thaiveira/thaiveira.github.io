@@ -258,6 +258,14 @@ main > a[href="#"]{
   .gallery{ grid-template-columns: repeat(4, 1fr); }
 }
 
+.lightbox-figure{
+  position: relative;
+  display: inline-flex;
+  max-width: min(90vw, 720px);
+  max-height: 85vh;
+  margin: 0;
+}
+
 .lightbox-figure img{
   display: block;
   max-width: 100%;
@@ -267,46 +275,41 @@ main > a[href="#"]{
   box-shadow: 0 12px 40px rgba(0,0,0,0.55);
 }
 
-.lightbox-close{
-  position: fixed;
-  top: 14px;
-  right: 14px;
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next{
+  position: absolute;
   background: transparent;
   border: none;
   color: var(--lilac);
   font-family: 'VT323', monospace;
-  font-size: 2.2rem;
   line-height: 1;
   cursor: pointer;
   padding: 8px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   transition: color .15s ease, transform .15s ease;
 }
+
+.lightbox-close{
+  top: 6px;
+  right: 6px;
+  font-size: 2rem;
+}
+
+.lightbox-prev,
+.lightbox-next{
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.4rem;
+}
+
+.lightbox-prev{ left: 6px; }
+.lightbox-next{ right: 6px; }
 
 .lightbox-close:hover{
   color: var(--pink);
   transform: scale(1.15);
 }
-
-.lightbox-prev,
-.lightbox-next{
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: var(--lilac);
-  font-family: 'VT323', monospace;
-  font-size: 2.6rem;
-  line-height: 1;
-  cursor: pointer;
-  padding: 8px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  transition: color .15s ease, transform .15s ease;
-}
-
-.lightbox-prev{ left: 8px; }
-.lightbox-next{ right: 8px; }
 
 .lightbox-prev:hover,
 .lightbox-next:hover{
@@ -315,11 +318,9 @@ main > a[href="#"]{
 }
 
 @media (max-width: 560px){
+  .lightbox-close{ font-size: 1.7rem; }
   .lightbox-prev,
-  .lightbox-next{
-    font-size: 2rem;
-    padding: 6px;
-  }
+  .lightbox-next{ font-size: 2rem; }
 }
 
 main > img[src*="shields.io"]{

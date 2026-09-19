@@ -13,15 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dialog = document.createElement('dialog');
   dialog.className = 'lightbox-dialog';
-  dialog.innerHTML = `
-    <button class="lightbox-close" aria-label="Fechar">×</button>
-    <button class="lightbox-prev" aria-label="Anterior">←</button>
+    dialog.innerHTML = `
     <figure class="lightbox-figure">
       <img src="" alt="">
+      <button class="lightbox-close" aria-label="Fechar">×</button>
+      <button class="lightbox-prev" aria-label="Anterior">←</button>
+      <button class="lightbox-next" aria-label="Próxima">→</button>
     </figure>
-    <button class="lightbox-next" aria-label="Próxima">→</button>
-    <div class="lightbox-counter"></div>
   `;
+  document.body.appendChild(dialog);
+
+  const imgEl = dialog.querySelector('.lightbox-figure img');
   document.body.appendChild(dialog);
 
   const imgEl = dialog.querySelector('.lightbox-figure img');
