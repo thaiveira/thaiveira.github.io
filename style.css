@@ -373,7 +373,7 @@ footer{
 }
 
 footer::before{
-  content: "© 2026 Thaise Oliveira. Feito com HTML, CSS, Java e café.";
+  content: "© 2026 Thaise Oliveira. Feito com HTML, CSS, JavaScript e café.";
   display: block;
   color: var(--ink);
   margin-bottom: 8px;
