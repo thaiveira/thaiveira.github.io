@@ -258,95 +258,67 @@ main > a[href="#"]{
   .gallery{ grid-template-columns: repeat(4, 1fr); }
 }
 
-.lightbox-overlay{
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(23,21,31,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .15s ease;
-}
-
-.lightbox-overlay.is-open{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.lightbox-figure{
-  position: relative;
-  max-width: min(90vw, 720px);
-  max-height: 85vh;
-}
-
 .lightbox-figure img{
   display: block;
   max-width: 100%;
   max-height: 85vh;
   width: auto;
   height: auto;
-  border: 3px solid #fff;
-  box-shadow: 6px 6px 0 rgba(0,0,0,0.6);
-  background: var(--card-bg);
-}
-
-.lightbox-close,
-.lightbox-prev,
-.lightbox-next{
-  position: fixed;
-  font-family: 'VT323', monospace;
-  font-size: 1.8rem;
-  line-height: 1;
-  color: #fff;
-  background: var(--ink);
-  border: 2px solid #fff;
-  cursor: pointer;
-  padding: 6px 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
 }
 
 .lightbox-close{
-  top: 18px;
-  right: 18px;
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: var(--lilac);
+  font-family: 'VT323', monospace;
+  font-size: 2.2rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  transition: color .15s ease, transform .15s ease;
+}
+
+.lightbox-close:hover{
+  color: var(--pink);
+  transform: scale(1.15);
 }
 
 .lightbox-prev,
 .lightbox-next{
+  position: fixed;
   top: 50%;
   transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--lilac);
+  font-family: 'VT323', monospace;
+  font-size: 2.6rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  transition: color .15s ease, transform .15s ease;
 }
 
-.lightbox-prev{ left: 12px; }
-.lightbox-next{ right: 12px; }
+.lightbox-prev{ left: 8px; }
+.lightbox-next{ right: 8px; }
 
-.lightbox-close:hover,
 .lightbox-prev:hover,
 .lightbox-next:hover{
-  background: var(--lilac);
-  border-color: var(--ink);
-}
-
-.lightbox-counter{
-  position: fixed;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'VT323', monospace;
-  font-size: 1.1rem;
-  color: #fff;
-  background: var(--ink);
-  padding: 3px 10px;
-  border: 2px solid #fff;
+  color: var(--pink);
+  transform: translateY(-50%) scale(1.15);
 }
 
 @media (max-width: 560px){
   .lightbox-prev,
   .lightbox-next{
-    padding: 4px 9px;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    padding: 6px;
   }
 }
 
