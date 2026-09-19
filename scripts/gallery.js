@@ -33,16 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     new Image().src = images[index].getAttribute('src');
   }
 
-  function render(index) {
-    current = (index + images.length) % images.length;
-    const src = images[current].getAttribute('src');
-    imgEl.setAttribute('src', src);
-    imgEl.setAttribute('alt', images[current].getAttribute('alt') || '');
-    counterEl.textContent = `${current + 1} / ${images.length}`;
-    preload(current - 1);
-    preload(current + 1);
-  }
-
   function withViewTransition(fn) {
     if (supportsViewTransitions && !reduceMotion) {
       document.startViewTransition(fn);
