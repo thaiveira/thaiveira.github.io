@@ -258,21 +258,63 @@ main > a[href="#"]{
   .gallery{ grid-template-columns: repeat(4, 1fr); }
 }
 
+/* ---------- lightbox (baseado em <dialog> nativo) ---------- */
+.lightbox-dialog{
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+.lightbox-dialog[open]{
+  position: fixed;
+  inset: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: lightbox-fade .15s ease;
+}
+
+.lightbox-dialog::backdrop{
+  background: rgba(23,21,31,0.92);
+}
+
+@keyframes lightbox-fade{
+  from{ opacity: 0; }
+  to{ opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .lightbox-dialog[open]{ animation: none; }
+}
+
+/* moldura clara ao redor da imagem — é aqui que os botões ficam,
+   nunca sobre a própria foto */
 .lightbox-figure{
   position: relative;
   display: inline-flex;
-  max-width: min(90vw, 720px);
-  max-height: 85vh;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: min(92vw, 780px);
+  max-height: 90vh;
   margin: 0;
+  padding: 50px 56px;
+  background: #fdfbf6;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.55);
 }
 
 .lightbox-figure img{
   display: block;
   max-width: 100%;
-  max-height: 85vh;
+  max-height: 76vh;
   width: auto;
   height: auto;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.55);
 }
 
 .lightbox-close,
@@ -285,26 +327,25 @@ main > a[href="#"]{
   font-family: 'VT323', monospace;
   line-height: 1;
   cursor: pointer;
-  padding: 8px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  padding: 6px;
   transition: color .15s ease, transform .15s ease;
 }
 
 .lightbox-close{
-  top: 6px;
-  right: 6px;
-  font-size: 2rem;
+  top: 10px;
+  right: 12px;
+  font-size: 1.9rem;
 }
 
 .lightbox-prev,
 .lightbox-next{
   top: 50%;
   transform: translateY(-50%);
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
-.lightbox-prev{ left: 6px; }
-.lightbox-next{ right: 6px; }
+.lightbox-prev{ left: 10px; }
+.lightbox-next{ right: 10px; }
 
 .lightbox-close:hover{
   color: var(--pink);
@@ -318,9 +359,10 @@ main > a[href="#"]{
 }
 
 @media (max-width: 560px){
-  .lightbox-close{ font-size: 1.7rem; }
+  .lightbox-figure{ padding: 40px 42px; }
+  .lightbox-close{ font-size: 1.6rem; }
   .lightbox-prev,
-  .lightbox-next{ font-size: 2rem; }
+  .lightbox-next{ font-size: 1.9rem; }
 }
 
 main > img[src*="shields.io"]{

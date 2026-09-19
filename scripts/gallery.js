@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dialog = document.createElement('dialog');
   dialog.className = 'lightbox-dialog';
-    dialog.innerHTML = `
+  dialog.innerHTML = `
     <figure class="lightbox-figure">
       <img src="" alt="">
       <button class="lightbox-close" aria-label="Fechar">×</button>
@@ -33,19 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
     new Image().src = images[index].getAttribute('src');
   }
 
-  function preload(index) {
-  if (index < 0 || index >= images.length) return;
-  new Image().src = images[index].getAttribute('src');
-}
-
-function render(index) {
-  current = (index + images.length) % images.length;
-  const src = images[current].getAttribute('src');
-  imgEl.setAttribute('src', src);
-  imgEl.setAttribute('alt', images[current].getAttribute('alt') || '');
-  preload(current - 1);
-  preload(current + 1);
-}
+  function render(index) {
+    current = (index + images.length) % images.length;
+    const src = images[current].getAttribute('src');
+    imgEl.setAttribute('src', src);
+    imgEl.setAttribute('alt', images[current].getAttribute('alt') || '');
+    preload(current - 1);
+    preload(current + 1);
+  }
 
   function withViewTransition(fn) {
     if (supportsViewTransitions && !reduceMotion) {
