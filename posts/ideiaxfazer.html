@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thaise Oliveira</title>
     <link rel="icon" href="imagens/icon.png" type="image/png" alt="estrela de 8 pontas em pixel art na cor lilás">
+    <script>
+  (function () {
+    try {
+      if (localStorage.getItem('thaiveira-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
