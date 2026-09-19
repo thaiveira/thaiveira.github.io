@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(dialog);
 
   const imgEl = dialog.querySelector('.lightbox-figure img');
-  const counterEl = dialog.querySelector('.lightbox-counter');
   const closeBtn = dialog.querySelector('.lightbox-close');
   const prevBtn = dialog.querySelector('.lightbox-prev');
   const nextBtn = dialog.querySelector('.lightbox-next');
