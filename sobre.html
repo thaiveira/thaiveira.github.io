@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thaise Oliveira</title>
-    <link rel="icon" href="imagens/icon.png" type="image/png">
+    <link rel="icon" href="imagens/icon.png" type="image/png" alt="estrela de 8 pontas em pixel art na cor lilás">
+    <script>
+  (function () {
+    try {
+      if (localStorage.getItem('thaiveira-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +21,7 @@
 </head>
     <script src="/thaiveira.github.io/scripts/effects.js"></script>
    <script src="/thaiveira.github.io/scripts/gallery.js"></script>
+   <script src="/thaiveira.github.io/scripts/theme-toggle.js"></script>
 <body>
     <div class="background"></div>
     <main class="content">
@@ -20,13 +30,10 @@
         <h1 class="title">Olá, sou Thaise Oliveira</h1>
 
         <div class="separator wide">
-            <img src="imagens/separador.png" 
-            alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-            class="separator-img">
+            <img src="imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores preto, rosa e lilás" class="separator-img">
         </div>
         <div class="profile-section">
-            <img src="imagens/thaiveira-1.png" 
-                 class="profile-img">
+            <img src="imagens/thaiveira-1.png" class="profile-img" alt="Foto de Thaise Oliveira, mulher branca de cabelo longo preto, sorrindo, com camiseta preta estampada com caveiras roxas, colar de prata com pingente de coração e brincos prata geométricos, cenário ou objetos relevantes]">
         </div>
     
          <!-- Post -->
@@ -52,24 +59,19 @@
             
         <!-- Titulo-->
         <h1 class="title">Contato</h1>
-        <div class="separator">
-            <img src="imagens/separador.png" 
-            alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-            class="separator-img">
-        </div> 
+        
         <!-- Post -->
         <div class="description1">
             ✶ <a href="mailto:site.penholder235@passinbox.com?subject=Olá&body=Escreva%20sua%20mensagem%20aqui">E-mail</a>
             ✶ <a href="https://www.linkedin.com/in/thaiveira/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             ✶ <a href="https://www.instagram.com/thaiveira/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            ✶ <a href="https://www.behance.net/thai16" target="_blank" rel="noopener noreferrer">Behance</a>
             
         </div>
 
         <!-- Fim do Post -->
         <div class="separator">
-            <img src="imagens/separador.png" 
-            alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-            class="separator-img">
+            <img src="imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores preto, rosa e lilás" class="separator-img">
         </div> 
         <nav class="nav-menu">
             <a href="index.html" class="nav-link">Início</a>

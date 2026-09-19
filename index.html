@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thaise Oliveira</title>
-    <link rel="icon" href="imagens/icon.png" type="image/png">
+    <link rel="icon" href="imagens/icon.png" type="image/png" alt="estrela de 8 pontas em pixel art na cor lilás">
+    <script>
+  (function () {
+    try {
+      if (localStorage.getItem('thaiveira-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +21,7 @@
 </head>
     <script src="/thaiveira.github.io/scripts/effects.js"></script>
    <script src="/thaiveira.github.io/scripts/gallery.js"></script>
+   <script src="/thaiveira.github.io/scripts/theme-toggle.js"></script>
 <body>
     <div class="background"></div>
     <main class="content">
@@ -22,9 +32,7 @@
                  class="profile-img">
         </div>
         <div class="separator">
-            <img src="imagens/separador.png" 
-                 alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-                 class="separator-img">
+            <img src="imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores preto, rosa e lilás" class="separator-img">
         </div>
         
         <!-- Descrição -->
@@ -38,9 +46,7 @@
         </div>
         
         <div class="separator">
-            <img src="imagens/separador.png" 
-                 alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-                 class="separator-img">
+            <img src="imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores preto, rosa e lilás" class="separator-img">
         </div>
         <nav class="nav-menu">
             <a href="index.html" class="nav-link active">Início</a>

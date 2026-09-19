@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thaise Oliveira</title>
-    <link rel="icon" href="imagens/icon.png" type="image/png">
+    <link rel="icon" href="imagens/icon.png" type="image/png" alt="estrela de 8 pontas em pixel art na cor lilás">
+    <script>
+  (function () {
+    try {
+      if (localStorage.getItem('thaiveira-theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    } catch (e) {}
+  })();
+</script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +21,7 @@
 </head>
     <script src="/thaiveira.github.io/scripts/effects.js"></script>
    <script src="/thaiveira.github.io/scripts/gallery.js"></script>
+   <script src="/thaiveira.github.io/scripts/theme-toggle.js"></script>
 <body>
     <div class="background"></div>
     <main class="content">
@@ -20,9 +30,7 @@
 <h1 class="title">métricas</h1>
 
 <div class="separator">
-<img src="imagens/separador.png" 
-alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-class="separator-img">
+<img src="imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores preto, rosa e lilás" class="separator-img">
 </div>
 
 <p class="description1">Esse é um espaço para praticar análise de dados com métricas mensais reais dos meus estudos e atividade no Github e Codeberg. As métricas são geradas com Python (pandas + matplotlib) excluindo fork de outros usuários, todas referentes aos últimos 6 meses, e são atualizadas mensalmente sempre excluindo o mês mais antigo.</p>
@@ -42,9 +50,7 @@ class="separator-img">
 <img src="imagens/estudos.svg" alt="Gráfico de barras horizontal mostrando horas de estudo por tópico: Python, Pandas, Cloud, HTML/CSS, Git e UX/UI" style="width:100%; max-width:640px; display:block; margin:0 auto;">
 
 <div class="separator">
-<img src="imagens/separador.png" 
-alt="imagem retangular com grafismos organicos abstratos nas cor lilás" 
-class="separator-img">
+<img src="imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores preto, rosa e lilás" class="separator-img">
 </div>
 
 <nav class="nav-menu">
