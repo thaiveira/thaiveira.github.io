@@ -1,6 +1,6 @@
 # thaiveira.com.br
 
-Meu site, portfólio, blog e playground que cresce e muda comigo. Feito com HTML, CSS, JavaScript um pouco de Python e café, com em um visual pixel art.
+Meu site, portfólio e blog que é um playground que cresce e muda comigo. Feito com HTML, CSS, JavaScript, um pouco de Python e café.
 
 🌐 **[thaiveira.com.br](https://thaiveira.com.br)**
 
@@ -12,8 +12,8 @@ Meu site, portfólio, blog e playground que cresce e muda comigo. Feito com HTML
   
 ## O que tem aqui
 
-- **Pixel art**: estrelas, lua, separadores e ícones desenhados em pixel art, com as fontes VT323 e Space Mono.
-- **Tema claro e escuro**: botão no canto da tela, com a escolha salva no navegador e mantida entre as páginas.
+- **Visual pixel art**: estrelas, lua, separadores, ícones e fontes em pixel art.
+- **Tema claro e escuro**: botão no canto superior da tela, com a escolha salva no navegador e mantida entre as páginas.
 - **Galeria com lightbox**: `<dialog>` nativo, setas e teclado, swipe no celular e transição suave (View Transitions API).
 - **Métricas automáticas**: gráficos de commits e linguagens do meu [GitHub](https://github.com/thaiveira) e [Codeberg](https://codeberg.org/thaiveira), gerados em Python e atualizados todo mês por uma GitHub Action.
 - **Sem frameworks**: HTML, CSS e JS puros, sem build.
