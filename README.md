@@ -9,7 +9,7 @@ Meu site pessoal: portfólio, blog e playground que cresce e muda comigo. Feito 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222?logo=github&logoColor=white)
-
+  
 ## O que tem aqui
 
 - **Pixel art**: estrelas, lua, separadores e ícones desenhados em pixel art, com as fontes VT323 e Space Mono.
@@ -41,4 +41,4 @@ Meu site pessoal: portfólio, blog e playground que cresce e muda comigo. Feito 
 
 ## Deploy
 
-GitHub Pages, direto da branch
+GitHub Pages, via VScodium.

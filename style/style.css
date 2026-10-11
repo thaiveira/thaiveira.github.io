@@ -471,3 +471,14 @@ body,
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
 }
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.grafico{
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 16px auto 0;
+}
