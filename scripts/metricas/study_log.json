@@ -1,11 +1,11 @@
 {
   "horas_por_topico": [
-    {"topico": "Python", "horas": 62},
+    {"topico": "Python", "horas": 66},
     {"topico": "Dados / Pandas", "horas": 34},
-    {"topico": "Cloud", "horas": 21},
+    {"topico": "Cloud", "horas": 22},
     {"topico": "HTML/CSS", "horas": 48},
-    {"topico": "Versionamento (Git)", "horas": 19},
-    {"topico": "UX/UI", "horas": 27},
-    {"topico": "JavaScript", "horas": 5}
+    {"topico": "Versionamento (Git)", "horas": 25},
+    {"topico": "UX/UI", "horas": 29},
+    {"topico": "JavaScript", "horas": 10}
   ]
 }

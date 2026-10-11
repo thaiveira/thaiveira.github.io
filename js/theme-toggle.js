@@ -29,7 +29,7 @@
     }
 
     function syncIcon() {
-      img.src = isDark() ? 'imagens/icon.png' : 'imagens/icon-moon.png';
+      img.src = isDark() ? '/imagens/icon.png' : '/imagens/icon-moon.png';
       img.alt = isDark() ? 'Estrela em pixel art' : 'Lua crescente em pixel art';
     }
 
