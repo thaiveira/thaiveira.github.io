@@ -1,7 +1,44 @@
-# Site - Thaise Oliveira
+# thaiveira.com.br
 
-🌐 Meu site, www.thaiveira.com, originalmente Wordpress, adaptado para GitHub Pages.
+Meu site pessoal: portfólio, blog e playground que cresce e muda comigo. Feito com HTML, CSS e JavaScript, em um visual de pixel art.
 
-🚧 Constantemente em construção por diversão e para aprender coisas novas. Ele cresce e muda comigo.
+🌐 **[thaiveira.com.br](https://thaiveira.com.br)**
 
-👩‍💻 Até agora usei: HTML para construção das páginas e postagens no blog; CSS para o visual; Java para galeria de imagens e efeitos no BG/seta; Python para métricas mensais reais dos meus estudos a partir da minha atividade no Github+Codeberg.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222?logo=github&logoColor=white)
+
+## O que tem aqui
+
+- **Pixel art**: estrelas, lua, separadores e ícones desenhados em pixel art, com as fontes VT323 e Space Mono.
+- **Tema claro e escuro**: botão no canto da tela, com a escolha salva no navegador e mantida entre as páginas.
+- **Galeria com lightbox**: `<dialog>` nativo, setas e teclado, swipe no celular e transição suave (View Transitions API).
+- **Métricas automáticas**: gráficos de commits e linguagens do meu [GitHub](https://github.com/thaiveira) e [Codeberg](https://codeberg.org/thaiveira), gerados em Python e atualizados todo mês por uma GitHub Action.
+- **Sem frameworks**: HTML, CSS e JS puros, sem build.
+
+## Estrutura
+
+```
+.
+├── .github/workflows/metricas.yml   # Action das métricas
+├── imagens/                         # imagens do visual do site
+├── js/                              # tema, galeria e efeitos
+├── posts/                           # blog, um .html por post (+ imagens/ dos posts)
+├── scripts/metricas/                # gerar_metricas.py, fontes e requirements.txt
+├── style/style.css
+├── *.html                           # index, sobre, portfolio, metricas, blog...
+├── feed.xml                         # RSS do blog
+└── CNAME                            # domínio personalizado
+```
+
+## Métricas
+
+`scripts/metricas/gerar_metricas.py` busca commits dos últimos 6 meses e a distribuição de linguagens aqui no meu GiHub e lá no meu Codeberg. As horas de estudo vêm de `study_log.json`, que atualizo à mão.
+
+**Automático:** o workflow roda todo fim de mês e abre um **pull request** para eu revisar e aceitar.
+
+## Deploy
+
+GitHub Pages, direto da branch
