@@ -8,7 +8,11 @@
     <atom:link href="https://thaiveira.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <!-- Post-->
-
+   <item>
+      <title>News 13/10/2026</title>
+      <link>https://thaiveira.com.br/news.html</link>
+      <description>Debug geral e aprimoramento do portfólio</description>
+    </item>
      <item>
       <title>News 10/09/2026</title>
       <link>https://thaiveira.com.br/news.html</link>
