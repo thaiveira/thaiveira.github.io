@@ -1,4 +1,4 @@
-# thaiveira.com.br
+# Site pessoal e portfólio de Thaise Oliveira (design + full stack)
 
 Meu site, portfólio e blog que é um playground que cresce e muda comigo. Feito com HTML, CSS, JavaScript, um pouco de Python e café.
 
