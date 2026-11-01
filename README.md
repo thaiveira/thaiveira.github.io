@@ -30,7 +30,7 @@ Meu site, portfólio e blog que é um playground que cresce e muda comigo. Feito
 ├── js/                              # tema, galeria e efeitos
 ├── posts/                           # blog, um .html por post (+ imagens/ dos posts)
 ├── scripts/metricas/                # gerar_metricas.py, fontes e requirements.txt
-├── style/style.css
+├── style/style.css                  # visual do site
 ├── *.html                           # index, sobre, portfolio, metricas, blog...
 ├── feed.xml                         # RSS do blog
 └── CNAME                            # domínio personalizado
