@@ -482,3 +482,19 @@ img{
   max-width: 640px;
   margin: 16px auto 0;
 }
+.post-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 4px 0 16px;
+  font-family: 'VT323', monospace;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 420px){
+  .post-nav{
+    font-size: 1.05rem;
+    gap: 18px;
+  }
+}
