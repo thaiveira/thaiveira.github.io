@@ -2,82 +2,133 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog - Thaise Oliveira</title>
-    <link>https://thaiveira.github.io</link>
-    <description>Blog sobre hardware, Linux, experimentações diversas, linguagens, design e arte.</description>
+    <link>https://thaiveira.com.br</link>
+    <description>Site sobre hardware, Linux, experimentações diversas, linguagens, design e arte.</description>
     <language>pt-br</language>
-    <atom:link href="https://thaiveira.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    
-    <!-- Post-->
-         <item>
+    <lastBuildDate>Sun, 22 Nov 2026 12:00:00 -0300</lastBuildDate>
+    <atom:link href="https://thaiveira.com.br/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://thaiveira.com.br/imagens/icon.png</url>
+      <title>Site - Thaise Oliveira</title>
+      <link>https://thaiveira.com.br</link>
+    </image>
+
+    <item>
       <title>Blog 21/11/2026</title>
       <link>https://thaiveira.com.br/posts/diypc2.html</link>
-      <description>Faça voce mesmo: Computador (parte 2 de 3)</description>
-      <item>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/diypc2.html</guid>
+      <pubDate>21 Nov 2026 00:00:00 -0300</pubDate>
+      <category>Blog</category>
+      <description>Faça você mesmo: Computador (parte 2 de 3)</description>
+    </item>
+
+    <item>
       <title>Blog 20/11/2026</title>
       <link>https://thaiveira.com.br/posts/diypc.html</link>
-      <description>Faça voce mesmo: Computador (parte 1 de 3)</description>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/diypc.html</guid>
+      <pubDate>20 Nov 2026 00:00:00 -0300</pubDate>
+      <category>Blog</category>
+      <description>Faça você mesmo: Computador (parte 1 de 3)</description>
     </item>
-      <item>
+
+    <item>
       <title>News 04/11/2026</title>
       <link>https://thaiveira.com.br/contato.html</link>
+      <guid isPermaLink="false">news-2026-11-04</guid>
+      <pubDate>04 Nov 2026 00:00:00 -0300</pubDate>
+      <category>News</category>
       <description>Nova página: contato</description>
     </item>
+
     <item>
       <title>News 31/10/2026</title>
       <link>https://thaiveira.com.br/news.html</link>
+      <guid isPermaLink="false">news-2026-10-31</guid>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 -0300</pubDate>
+      <category>News</category>
       <description>Sobre o pinktober</description>
     </item>
-   <item>
+
+    <item>
       <title>News 13/10/2026</title>
       <link>https://thaiveira.com.br/news.html</link>
+      <guid isPermaLink="false">news-2026-10-13</guid>
+      <pubDate>13 Oct 2026 00:00:00 -0300</pubDate>
+      <category>News</category>
       <description>Debug geral e aprimoramento do portfólio</description>
     </item>
-     <item>
+
+    <item>
       <title>News 10/09/2026</title>
       <link>https://thaiveira.com.br/news.html</link>
+      <guid isPermaLink="false">news-2026-09-10</guid>
+      <pubDate>10 Sep 2026 00:00:00 -0300</pubDate>
+      <category>News</category>
       <description>Novas mudanças no site!</description>
     </item>
+
     <item>
       <title>Github Vs Codeberg</title>
       <link>https://thaiveira.com.br/posts/githubxcodeberg.html</link>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/githubxcodeberg.html</guid>
+      <pubDate>08 Jun 2026 00:00:00 -0300</pubDate>
+      <category>Blog</category>
       <description>GitHub Vs Codeberg: comparações relevantes e como os uso.</description>
     </item>
 
     <item>
       <title>News 08/06/2026</title>
       <link>https://thaiveira.com.br/indico.html</link>
+      <guid isPermaLink="false">news-2026-06-08</guid>
+      <pubDate>08 Jun 2026 00:00:00 -0300</pubDate>
+      <category>News</category>
       <description>Página de apps e programas que indico.</description>
     </item>
 
     <item>
       <title>News 04/05/2026</title>
-      <link>https://thaiveira.github.io/news.html</link>
+      <link>https://thaiveira.com.br/news.html</link>
+      <guid isPermaLink="false">news-2026-05-04</guid>
+      <pubDate>04 May 2026 00:00:00 -0300</pubDate>
+      <category>News</category>
       <description>Transferência de hospedagem e novo layout.</description>
     </item>
 
     <item>
       <title>Montando PC pela 1ª vez</title>
-      <link>https://thaiveira.github.io/posts/montando-pc.html</link>
+      <link>https://thaiveira.com.br/posts/montando-pc.html</link>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/montando-pc.html</guid>
+     <pubDate>20 Apr 2026 00:00:00 -0300</pubDate>
+      <category>Blog</category>
       <description>Minha experiência montando um PC pela primeira vez.</description>
     </item>
-    
+
     <item>
-      <title>Ter idéias X Fazer acontecer</title>
-      <link>https://thaiveira.github.io/posts/ideiaxfazer.html</link>
-      <description>Reflexão sobre a diferença entre ter idéias e colocá-las em prática.</description>
+      <title>Ter ideias X Fazer acontecer</title>
+      <link>https://thaiveira.com.br/posts/ideiaxfazer.html</link>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/ideiaxfazer.html</guid>
+      <pubDate>18 Aug 2025 00:00:00 -0300</pubDate>
+      <category>Blog</category>
+      <description>Reflexão sobre a diferença entre ter ideias e colocá-las em prática.</description>
     </item>
-    
+
     <item>
       <title>Open source, uma solução</title>
-      <link>https://thaiveira.github.io/posts/foss-solucao.html</link>
+      <link>https://thaiveira.com.br/posts/foss-solucao.html</link>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/foss-solucao.html</guid>
+     <pubDate>17 Jul 2025 00:00:00 -0300</pubDate>
+      <category>Blog</category>
       <description>Discussão sobre software livre e código aberto como solução.</description>
     </item>
-    
+
     <item>
       <title>Hello World</title>
-      <link>https://thaiveira.github.io/posts/hello-world.html</link>
+      <link>https://thaiveira.com.br/posts/hello-world.html</link>
+      <guid isPermaLink="true">https://thaiveira.com.br/posts/hello-world.html</guid>
+      <pubDate>10 Jun 2025 00:00:00 -0300</pubDate>
+      <category>Blog</category>
       <description>Primeiro post do blog - Hello World!</description>
     </item>
-    
+
   </channel>
 </rss>
