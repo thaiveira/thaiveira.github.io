@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça voce mesmo: Computador (parte 2 de 3)| Thaise Oliveira · Designer e desenvolvedora full stack</title>
+    <link rel="icon" href="/imagens/icon.png" type="image/png">
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem('thaiveira-theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="/js/effects.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    <script src="/js/theme-toggle.js" defer></script>
+</head>
+<body>
+    <div class="background"></div>
+    <main class="content">
+
+        <nav class="nav-menu">
+            <a href="https://thaiveira.github.io/blog.html" class="nav-link active">Blog</a>
+            <span class="nav-divider">✶</span>
+            <a href="https://thaiveira.github.io/news.html" class="nav-link">News</a>
+            <span class="nav-divider">✶</span>
+            <a href="https://thaiveira.github.io/setup.html" class="nav-link">Setup</a>
+            <span class="nav-divider">✶</span>
+            <a href="https://thaiveira.github.io/indico.html" class="nav-link">Indico</a>
+        </nav>
+         <!-- Titulo do Post -->
+        <h1 class="title">Faça voce mesmo: Computador <br>(parte 2 de 3)</h1>
+        <div class="separator">
+            <img src="/imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores cinza, rosa e lilás" class="separator-img">
+        </div>
+        
+        <!-- POST -->
+        <div class="description1">
+        <p>    
+        Na <a href="https://thaiveira.com.br/posts/diypc.html" target="_blank" rel="noopener noreferrer">parte 1</a> expliquei por que montar PC ficou tão caro, agora vem a pergunta natural: dá pra melhorar pagando menos e sem sofrer? Dá, dependendo do que você vai fazer com a máquina. Aqui entram três pilares: trocar o Windows pelo Linux, comprar placa de vídeo e outras peças usadas e, às vezes, nem montar um PC.
+        </p>
+        <p>
+        <strong>Linux economiza RAM e armazenamento</strong>: Nos testes que achei, o Windows 11 consome bem mais memória que o Linux. Num teste do Linus Tech Tips, o Windows 11 ocupava 9,3 GB parado, contra 4,7 GB do Linux Mint. Em outro teste com 8 GB de RAM, o Fedora usava 2,27 GB parado e o Windows 6,47 GB. No disco, o Windows 11 pede 64 GB de armazenamento e o Ubuntu 26.04, 25 GB.
+        </p>
+        <p>
+        Mas vale ser honesta, o uso de RAM parado não mede velocidade e RAM livre é RAM desperdiçada, então parte desse número é cache. Além disso o Ubuntu 26.04 subiu o mínimo para 6 GB de RAM, mais que o Windows 11. Já o Linux Mint (spoiler: é a minha distro) continua pedindo 2 GB no mínimo e 4 GB para uso confortável, ou seja, a economia de verdade aparece na hora de escolher a distro certa. E tem outro ganho: sem licença do Windows pra pagar. Uma licença de Windows 11 Home aparecia por R$ 1.100, ou R$ 789,99 no PIX em lojas marketplace (desconfie de chave muito barata) sou completamente a favor de piratearem empresas que não ajustam seus preços por país e só convertem do dólar, isso merece ser destacado, pois o Linux é totalmente grátis e de código aberto.  
+        </p>
+        <p>
+        <strong>Placa de vídeo usada, e quem sabe outras peças usadas também?</strong>: Se você vai jogar ou editar, placa de vídeo usada é a melhor escolha para economizar, é a única que ainda dá pra comprar sem a conta da IA pesar tanto. Nos anúncios que vi: RX 580 8 GB por volta de R$ 530 a R$ 550, GTX 1660 Super por R$ 600 a R$ 1.200 (o mais comum ficou em R$ 900 a R$ 1.100) e RX 6600 8 GB por R$ 1.199 em vários anúncios. Cuidado com anúncio bom demais: vi uma RTX 4090 de 24 GB a R$ 1.200 e isso cheira a golpe! Se possível peça para testar a placa, prefira vendedor com avaliação e pagamento com proteção e devolução em caso de defeito.
+        </p>
+        <p>
+        <strong>Ainda sobre placa de vídeo e por que a AMD combina melhor com Linux</strong>: se o seu sistema for Linux, vale olhar primeiro as da AMD. Por que a AMD se dá melhor: o driver da AMD, o AMDGPU, vem dentro do próprio kernel do Linux e é mantido junto com ele. A parte que roda os jogos também é aberta: o RADV, driver Vulkan sobre o qual o Proton roda, vem dentro do Mesa. Isso significa que você instala o Linux e a placa já funciona, sem baixar nada. Em 2025 a AMD ainda descontinuou o AMDVLK, seu driver Vulkan proprietário, e apostou só em código aberto. Um guia de late 2026 resume assim: para a maioria das pessoas, a melhor placa para jogar no Linux é uma Radeon (spoiler: é a minha placa).
+        </p>
+        <p>
+        E a NVIDIA? Funciona, mas com mais atrito. A NVIDIA abriu os módulos de kernel, mas mantém componentes críticos do espaço do usuário proprietários, ou seja, o driver que realmente faz a placa render continua fechado. Os módulos abertos valem para placas Turing (RTX 20) em diante, e as mais antigas, como a série GTX 10, ficam com o módulo fechado. Como o driver fica fora do kernel, uma atualização do kernel pode quebrar o driver, e em geral é preciso instalá-lo manualmente para ter o melhor desempenho. A alternativa aberta, o NVK, já é usável, mas ainda fica bem atrás do driver proprietário em desempenho. A parte boa: os problemas antigos de Wayland melhoraram com a sincronização explícita nos drivers 555. Resumindo, NVIDIA roda, mas dá mais trabalho de manutenção. 
+        </p>
+        <p> 
+        <strong>E um notebook usado?</strong>: Dependendo do uso (estudo, texto, navegador, programação e jogos de leve), um notebook usado com Linux resolve e custa menos que qualquer PC montado. Um Dell Latitude i5 de 7ª geração com 8 GB e SSD saía por R$ 1.799 a R$ 1.999 recondicionado, e um HP i5 de 8ª geração com 8 GB e SSD de 120 GB por R$ 1.300. A desvantagem: pouca margem para upgrade, talvez voce deva olhar um Think Plus? Tô aqui sugerindo como quem não quer nada sabe.
+        </p>
+        <p>
+        <strong>Linux tem muitas distros, qual escolher?</strong>: Tenho algumas sugestões, levando em consideração informações por aí na internet sobre os mais recomendados e um pouco de experiência pessoal.
+        </p>
+        <p>
+        Computadores antigos e fracos: Lubuntu, MX Linux e Linux Lite são as mais recomendadas nos guias que li, todas para máquinas de 64 bits. Os requisitos mínimos de RAM são 512 MB no Lubuntu, 768 MB no Linux Lite e 1 GB no MX Linux. Para máquinas muito velhas existe o antiX.  
+        </p>
+        <p>
+        Computadores medianos, para estudo e um pouco de jogos: Linux Mint, Ubuntu e Fedora Workstation. O Mint é o mais parecido com o Windows e é o que eu indicaria primeiro; foi a 4ª distro mais usada entre jogadores da Steam em outubro de 2026, com 8,41% (spoiler, é a minha distro).
+        </p>
+        <p>
+        Computadores gamers: CachyOS, Bazzite e Nobara. Na pesquisa da Steam de outubro de 2026, o CachyOS tinha 16,39%, o Bazzite 6,74% e o Nobara 1,53%. O CachyOS é baseado em Arch e pede mais intimidade com Linux; para começar, o Bazzite ou o Nobara são mais tranquilos. 
+        </p>
+        <strong>Linux gamer: Steam, Proton e Heroic</strong>: O Steam roda jogos de Windows no Linux pelo Proton. Em agosto de 2026, 30.006 jogos da Steam tinham classificação Verified ou Playable para Steam Deck, e uma análise apontou que quase 90% dos jogos de Windows conseguem abrir no Linux. Para jogos de fora da Steam existe o Heroic Games Launcher, um launcher open source sob licença GPLv3 que roda jogos da Epic, GOG e Amazon, com gerenciador integrado de Wine e Proton. Ele só abre jogos que você já comprou.
+        Mas então porque dizem que Linux não serve para gamers? O problema são jogos competitivos online com anti-cheat em nível de kernel. No Linux o anti-cheat roda só no espaço do usuário, e é por isso que muitos estúdios bloqueiam o sistema. Na prática: o Valorant aparece como Denied, Call of Duty e Battlefield 6 não rodam, e o Destiny 2 não funciona porque a Bungie não habilitou o suporte. O Fortnite também não roda ainda, mas a Epic está reconstruindo o Easy Anti-Cheat para trazê-lo ao Linux, sem data de lançamento. No total, 640 de 1.166 jogos com anti-cheat estavam como quebrados no Linux em setembro. Antes de migrar, confira o jogo no ProtonDB e no Are We Anti-Cheat Yet.
+        </p>
+        <p>
+        Com todas essas novas informações, vamos montar novos computadores hipotéticos com 16G de RAM e 500GB de SSD (pois estariam rodando Linux) + placa de vídeo usada ao invés de vídeo integrado, e comparar com os da parte 1.
+        </p>
+        <div class="tabela-wrap">
+  <table class="tabela-pc">
+    <caption><strong> DDR4 x DDR5 com 16GB de RAM e SSD de 500GB, com e sem placa de vídeo usada: preços no PIX em 21/11/2026</strong></caption>
+    <thead>
+      <tr>
+        <th scope="col">Peça</th>
+        <th scope="col">DDR4 sem GPU</th>
+        <th scope="col">DDR5 sem GPU</th>
+        <th scope="col">DDR4 + GPU usada</th>
+        <th scope="col">DDR5 + GPU usada</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Processador</th>
+        <td>AMD Ryzen 5 5600GT (vídeo integrado, geralmente vem com cooler)<br><span class="preco">R$ 899,99</span></td>
+        <td>AMD Ryzen 5 9600X (vídeo integrado, sem cooler)<br><span class="preco">R$ 1.199,99</span></td>
+        <td>AMD Ryzen 5 5600GT (vídeo integrado, geralmente vem com cooler)<br><span class="preco">R$ 899,99</span></td>
+        <td>AMD Ryzen 5 9600X (vídeo integrado, sem cooler)<br><span class="preco">R$ 1.199,99</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Placa-mãe</th>
+        <td>Gigabyte B550M Aorus Elite (mATX, DDR4)<br><span class="preco">R$ 706,99</span></td>
+        <td>Gigabyte B650M D3HP (mATX, DDR5)<br><span class="preco">R$ 832,99</span></td>
+        <td>Gigabyte B550M Aorus Elite (mATX, DDR4)<br><span class="preco">R$ 706,99</span></td>
+        <td>Gigabyte B650M D3HP (mATX, DDR5)<br><span class="preco">R$ 832,99</span></td>
+      </tr>
+      <tr>
+        <th scope="row">RAM 16 GB (2x8)</th>
+        <td>TeamGroup T-Force Delta RGB, DDR4<br><span class="preco">R$ 1.448,71</span></td>
+        <td>Kingston Fury Beast, DDR5 5600 MHz C36<br><span class="preco">R$ 1.899,99</span></td>
+        <td>TeamGroup T-Force Delta RGB, DDR4<br><span class="preco">R$ 1.448,71</span></td>
+        <td>Kingston Fury Beast, DDR5 5600 MHz C36<br><span class="preco">R$ 1.899,99</span></td>
+      </tr>
+      <tr>
+        <th scope="row">SSD 500 GB</th>
+        <td>Kingston NV3, M.2 NVMe PCIe 4.0<br><span class="preco">R$ 749,99</span></td>
+        <td>Kingston NV3, M.2 NVMe PCIe 4.0<br><span class="preco">R$ 749,99</span></td>
+        <td>Kingston NV3, M.2 NVMe PCIe 4.0<br><span class="preco">R$ 749,99</span></td>
+        <td>Kingston NV3, M.2 NVMe PCIe 4.0<br><span class="preco">R$ 749,99</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Fonte 550 W</th>
+        <td>MSI MAG A550BN, 80 Plus Bronze<br><span class="preco">R$ 316,69</span></td>
+        <td>MSI MAG A550BN, 80 Plus Bronze<br><span class="preco">R$ 316,69</span></td>
+        <td>MSI MAG A550BN, 80 Plus Bronze<br><span class="preco">R$ 316,69</span></td>
+        <td>MSI MAG A550BN, 80 Plus Bronze<br><span class="preco">R$ 316,69</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Gabinete</th>
+        <td>Kalkan Avalon Lite Wind, ATX, com 3 fans RGB<br><span class="preco">R$ 109,99</span></td>
+        <td>Kalkan Avalon Lite Wind, ATX, com 3 fans RGB<br><span class="preco">R$ 109,99</span></td>
+        <td>Kalkan Avalon Lite Wind, ATX, com 3 fans RGB<br><span class="preco">R$ 109,99</span></td>
+        <td>Kalkan Avalon Lite Wind, ATX, com 3 fans RGB<br><span class="preco">R$ 109,99</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Cooler</th>
+        <td>Já vem com o processador</td>
+        <td>MACH1 Boreal ARGB<br><span class="preco">R$ 115,99</span></td>
+        <td>Já vem com o processador</td>
+        <td>MACH1 Boreal ARGB<br><span class="preco">R$ 115,99</span></td>
+      </tr>
+      <tr>
+        <th scope="row">GPU usada (AMD)</th>
+        <td>—</td>
+        <td>—</td>
+        <td>RX 6600 8 GB (anúncios)<br><span class="preco">≈ R$ 1.200</span></td>
+        <td>RX 6600 8 GB (anúncios)<br><span class="preco">≈ R$ 1.200</span></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">Total</th>
+        <td>≈ R$ 4.232</td>
+        <td>≈ R$ 5.226</td>
+        <td>≈ R$ 5.432</td>
+        <td>≈ R$ 6.426</td>
+      </tr>
+    </tfoot>
+  </table>
+  <p class="tabela-nota">Sem placa de vídeo: diferença de R$ 993 (cerca de 23% a mais para DDR5). Com a RX 6600 usada nas duas, a diferença em reais é a mesma, e cai para cerca de 18%. Preço de placa usada é valor pedido em anúncios e varia muito. Nenhuma coluna inclui sistema operacional (Linux é gratuito). Confira no meupc.net antes de comprar.</p>
+</div>
+  <p>
+  Comparando com a tabela da parte 1 (32GB de RAM e SSD de 1TB)
+  </p>
+  <div class="tabela-wrap">
+  <table class="tabela-pc">
+    <caption>Parte 1 x Parte 2: totais no PIX em 20/11/2026</caption>
+    <thead>
+      <tr>
+        <th scope="col">Configuração</th>
+        <th scope="col">Parte 1<br>32 GB / 1 TB, sem placa de vídeo</th>
+        <th scope="col">Parte 2, sem placa de vídeo<br>16 GB / 500 GB</th>
+        <th scope="col">Parte 2, com placa de vídeo usada<br>16 GB / 500 GB + RX 6600</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">DDR4 (AM4)</th>
+        <td>R$ 5.596</td>
+        <td>R$ 4.232<br><span class="preco">− R$ 1.363 (≈ 24%)</span></td>
+        <td>R$ 5.432<br><span class="preco">− R$ 163 (≈ 3%)</span></td>
+      </tr>
+      <tr>
+        <th scope="row">DDR5 (AM5)</th>
+        <td>R$ 6.751</td>
+        <td>R$ 5.226<br><span class="preco">− R$ 1.525 (≈ 23%)</span></td>
+        <td>R$ 6.426<br><span class="preco">− R$ 325 (≈ 5%)</span></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">DDR5 a mais que DDR4</th>
+        <td>R$ 1.155 (≈ 21%)</td>
+        <td>R$ 993 (≈ 23%)</td>
+        <td>R$ 993 (≈ 18%)</td>
+      </tr>
+    </tfoot>
+  </table>
+  <p class="tabela-nota">As diferenças em rosa são em relação à parte 1 da mesma plataforma. Parte 2 usa o mesmo processador, placa-mãe, fonte, gabinete e cooler da parte 1, trocando só RAM e SSD (e somando a placa de vídeo usada na última coluna). O 5600GT vem com cooler na caixa; o 9600X não.</p>
+</div>
+<p>
+Cortar para 16GB de RAM, 500 GB de SSD e usar Linux economiza cerca de R$ 1.363 no DDR4 e R$ 1.525 no DDR5. Já uma máquina com placa de vídeo usada custa quase o mesmo que a da parte 1 sem placa nenhuma: R$ 163 a menos no DDR4 e R$ 325 a menos no DDR5. Também temos a opção de simplesmente cortar RAM e armazenamento e continuar sem placa de vídeo!
+<p>
+A RAM de 16GB não custa metade da de 32GB, porque o preço por GB sobe nos kits menores. Um único pente de 16GB DDR4 custava R$ 1.099,99, mas aí você perde o dual channel, que ajuda bastante o vídeo integrado.
+</p>
+Na parte 3, final dessa saga, mostro as decisões que tomei sobre meu PC que me fizeram economizar ainda mais e peças com links de onde comprei. Até o próximo texto!
+<p>
+
+</p>
+</div>
+</div>
+      
+    </div>
+
+        <!--Fim do Post-->
+    <div class="post-nav">
+        <a href="ideiaxfazer.html" class="post-nav-link post-nav-prev">‹ Anterior</a>
+        <a href="#" class="post-nav-top">↑</a>
+        <a href="hello-world.html" class="post-nav-link post-nav-next">Próximo ›</a>
+    </div>
+        
+    <div class="separator">
+            <img src="/imagens/separador.png" alt="estrelas de 8 pontas em pixel art, alinhadas horizontalmente, nas cores cinza, rosa e lilás" class="separator-img">
+        </div>
+        <nav class="nav-menu">
+            <a href="https://thaiveira.github.io/index.html" class="nav-link">Início</a>
+            <span class="nav-divider">✶</span>
+            <a href="https://thaiveira.github.io/sobre.html" class="nav-link">Sobre</a>
+            <span class="nav-divider">✶</span>
+            <a href="https://thaiveira.github.io/portfolio.html" class="nav-link">Portfólio</a>
+            <span class="nav-divider">✶</span>
+            <a href="contato.html" class="nav-link">Contato</a>
+        </nav>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
+

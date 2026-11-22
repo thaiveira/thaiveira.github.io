@@ -10,6 +10,7 @@
   --line: #17151f;
   --card-bg: #ffffff;
   --shadow: 0 10px 34px rgba(23,21,31,0.10);
+  --content-shadow: var(--shadow);
   --radius: 2px;
 }
 
@@ -60,7 +61,7 @@ body{
 .content{
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 710px;
   margin: 48px auto;
   padding: 32px 28px 40px;
   background: var(--card-bg);
@@ -380,7 +381,7 @@ footer{
   font-size: 1.05rem;
   padding: 24px 12px 40px;
   
-  max-width: 640px;
+  max-width: 710px;
   margin: 0 auto;
 }
 
@@ -479,7 +480,7 @@ img{
 .grafico{
   display: block;
   width: 100%;
-  max-width: 640px;
+  max-width: 710px;
   margin: 16px auto 0;
 }
 .post-nav{
@@ -552,4 +553,22 @@ img{
 .tabela-nota {
   font-size: 0.8rem;
   margin-top: 0.5rem;
+}
+/* respiro entre linhas nos parágrafos e listas do post */
+.content p,
+.content li{
+  line-height: 1.7;
+}
+
+.content ul,
+.content ol{
+  padding-left: 1.4rem;
+}
+
+/* celular e telas card não encosta nas bordas da tela */
+@media (max-width: 800px){
+  .content{
+    margin: 24px 12px;
+    padding: 24px 18px 32px;
+  }
 }
